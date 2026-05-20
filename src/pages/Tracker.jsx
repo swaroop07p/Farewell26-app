@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { collection, onSnapshot, doc, updateDoc, setDoc } from 'firebase/firestore';
+import { collection, onSnapshot, doc, updateDoc, setDoc, getDocs, deleteDoc } from 'firebase/firestore';
 import { db } from '../services/firebase';
 import { AuthContext } from '../context/AuthContext';
 import { guestsData } from '../data/seedData';
@@ -34,14 +34,29 @@ export default function Tracker() {
   };
 
   const handleJSONUpload = async () => {
-    if (!window.confirm("Upload JSON to database? This will overwrite existing guest details!")) return;
+    // Added a strong warning because wiping the database WILL reset everyone's "entered" status!
+    if (!window.confirm("⚠️ WARNING: This will completely WIPE the current database and replace it with your JSON file. Any live 'entered' tracking will be reset! Proceed?")) return;
+    
     try {
-      for (const guest of guestsData) {
-        await setDoc(doc(db, "guests", guest.usn), guest); 
-      }
-      alert("Database updated from JSON! 🎉");
+      // Step 1: Grab every existing document currently in the Firebase "guests" collection
+      const snapshot = await getDocs(collection(db, "guests"));
+      
+      // Step 2: Delete every single one of them (Cleaning the slate)
+      const deletePromises = snapshot.docs.map(document => 
+        deleteDoc(doc(db, "guests", document.id))
+      );
+      await Promise.all(deletePromises); // Wait for all deletions to finish
+
+      // Step 3: Upload the fresh JSON array
+      const addPromises = guestsData.map(guest => 
+        setDoc(doc(db, "guests", guest.usn), guest)
+      );
+      await Promise.all(addPromises); // Wait for all uploads to finish
+
+      alert("Database completely synced and cleaned! 🧹✨");
     } catch (error) {
-      alert("Upload failed. Check console.");
+      console.error("Sync Error:", error);
+      alert("Upload failed. Check the console.");
     }
   };
 

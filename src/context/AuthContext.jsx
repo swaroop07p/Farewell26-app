@@ -38,7 +38,8 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem('farewellUser', JSON.stringify(userData));
         return { success: true };
       } else {
-        return { success: false, message: "User not found. Check Name and USN." };
+        return { success: false, message: "Niv party attend agake agalla sorry!!" };
+        // User not found. Check Name and USN.
       }
     } catch (error) {
       console.error("Login Error:", error);

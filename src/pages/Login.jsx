@@ -74,7 +74,7 @@ export default function Login() {
               // This instantly turns their typing into capital letters!
               onChange={(e) => setName(e.target.value.toUpperCase())}
               className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 font-bold uppercase tracking-wide"
-              placeholder="E.G. JOHN DOE"
+              placeholder="E.G. ALICE"
             />
           </div>
 
@@ -88,7 +88,7 @@ export default function Login() {
               value={usn}
               onChange={(e) => setUsn(e.target.value.toUpperCase())}
               className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 font-bold uppercase tracking-wide"
-              placeholder="E.G. 4JN22CS001"
+              placeholder="E.G. 4JN2*AI***"
             />
           </div>
 

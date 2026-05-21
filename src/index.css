@@ -9,7 +9,7 @@
 
 body {
   /* Larger background size allows it to shift beautifully */
-  background: linear-gradient(-45deg, #0f172a, #4c1d95, #1e1b4b, #09090b);
+  background: linear-gradient(-45deg, #0f172a, #4c1d95, #120c6c, #09090b);
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
   color: white;

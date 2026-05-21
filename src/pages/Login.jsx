@@ -4,6 +4,7 @@ import { AuthContext } from "../context/AuthContext";
 import confetti from "canvas-confetti";
 import PartyEffect from "../components/PartyEffect";
 import { KeyRound } from "lucide-react";
+import Loader from "../components/Loader";
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -40,13 +41,7 @@ export default function Login() {
         particleCount: 150,
         spread: 70,
         origin: { y: 0.6 },
-        colors: [
-          "#ff0a54",
-          "#ff477e",
-          "#ff7096",
-          "#ff85a1",
-          "#fbb1bd",
-        ],
+        colors: ["#ff0a54", "#ff477e", "#ff7096", "#ff85a1", "#fbb1bd"],
       });
 
       setTimeout(() => {
@@ -63,10 +58,7 @@ export default function Login() {
       {/*  && <PartyEffect /> */}
 
       {/* FLIP CONTAINER */}
-      <div
-        className="w-full max-w-md h-110"
-        style={{ perspective: "1500px" }}
-      >
+      <div className="w-full max-w-md h-120" style={{ perspective: "1500px" }}>
         <div
           className={`relative w-full h-full transition-transform duration-700`}
           style={{
@@ -83,18 +75,26 @@ export default function Login() {
             onClick={() => setIsFlipped(true)}
           >
             <h1 className="text-4xl font-bold text-center mb-4 text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-red-500">
-            The Grand Send-Off: Celebrating Our Seniors
+              The Grand Send-Off: Celebrating Our Seniors
             </h1>
 
             <p className="text-purple-200 text-center mb-8 font-medium">
               Tap to Unlock Your Invitation
             </p>
 
-            <div className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center border border-white/20 shadow-xl animate-pulse">
+            <div className="relative w-32 h-32 flex items-center justify-center">
+              {/* The Loader Component framing the outside */}
+              <div className="absolute inset-0 pointer-events-none scale-110">
+                <Loader />
+              </div>
+
+              {/* Your Key Container inside */}
+              {/* <div className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center border border-white/20 shadow-xl animate-pulse"> */}
               <KeyRound
                 size={40}
                 className="text-amber-300 fill-amber-400/10"
               />
+              {/* </div> */}
             </div>
           </div>
 
@@ -130,9 +130,7 @@ export default function Login() {
                   type="text"
                   required
                   value={name}
-                  onChange={(e) =>
-                    setName(e.target.value.toUpperCase())
-                  }
+                  onChange={(e) => setName(e.target.value.toUpperCase())}
                   className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 font-bold uppercase tracking-wide"
                   placeholder="E.G. ALICE"
                 />
@@ -147,9 +145,7 @@ export default function Login() {
                   type="text"
                   required
                   value={usn}
-                  onChange={(e) =>
-                    setUsn(e.target.value.toUpperCase())
-                  }
+                  onChange={(e) => setUsn(e.target.value.toUpperCase())}
                   className="w-full px-4 py-3 rounded-lg bg-black/20 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 font-bold uppercase tracking-wide"
                   placeholder="E.G. 4JN2*AI***"
                 />

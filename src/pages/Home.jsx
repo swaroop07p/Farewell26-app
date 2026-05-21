@@ -64,7 +64,7 @@ export default function Home() {
               className="text-amber-400 fill-amber-400/20 animate-pulse shrink-0"
             />
           </h1>
-          <p className="text-purple-300 text-xs italic">
+          <p className="text-purple-400 text-xs font-bold italic">
             "{currentUser.funnyLine}"
           </p>
         </div>

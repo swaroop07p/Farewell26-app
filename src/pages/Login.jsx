@@ -13,8 +13,14 @@ export default function Login() {
   const { login, currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   if (currentUser) navigate("/home");
+  // }, [currentUser, navigate]);
   useEffect(() => {
-    if (currentUser) navigate("/home");
+    if (currentUser) {
+      if (currentUser.isScanner) navigate('/scanner');
+      else navigate('/home');
+    }
   }, [currentUser, navigate]);
 
   const handleLogin = async (e) => {
@@ -25,6 +31,11 @@ export default function Login() {
     const result = await login(name.toUpperCase(), usn);
 
     if (result.success) {
+      // NEW: Route the camera instantly!
+      if (result.isScanner) {
+        navigate('/scanner');
+        return; 
+      }
       confetti({
         particleCount: 150,
         spread: 70,

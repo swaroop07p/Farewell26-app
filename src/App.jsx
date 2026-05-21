@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Tracker from './pages/Tracker';
 import BottomNav from './components/BottomNav';
+import Scanner from './pages/Scanner';
 
 const ProtectedRoute = ({ children }) => {
   const { currentUser, loading } = useContext(AuthContext);
@@ -26,6 +27,8 @@ function AppRoutes() {
       <Route path="/" element={<Login />} />
       <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/tracker" element={<ProtectedRoute><Tracker /></ProtectedRoute>} />
+      {/* NEW ROUTE */}
+      <Route path="/scanner" element={<ProtectedRoute><Scanner /></ProtectedRoute>} />
     </Routes>
   );
 }

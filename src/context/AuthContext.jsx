@@ -22,6 +22,13 @@ export const AuthProvider = ({ children }) => {
   // Login function
   const login = async (name, usn) => {
     try {
+      // NEW: Instant Bypass for the Camera Device!
+      if (usn === "4JN24AI101" && name === "CAMERA") {
+        const cameraUser = { usn: "4JN24AI101", name: "CAMERA", isScanner: true, isAdmin: true };
+        setCurrentUser(cameraUser);
+        localStorage.setItem('farewellUser', JSON.stringify(cameraUser));
+        return { success: true, isScanner: true };
+      }
       const q = query(
         collection(db, "guests"), 
         where("usn", "==", usn.toUpperCase()),

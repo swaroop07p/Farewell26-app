@@ -31,4 +31,12 @@ export const guestsData = [
       funnyLine: "Always debugging, rarely sleeping.",
       entered: false,
     },
+    {
+      usn: "B", 
+      name: "B",
+      invitationImage: "https://res.cloudinary.com/.../john-invite.jpg",
+      QRImg: "https://res.cloudinary.com/.../john-qr.jpg",
+      funnyLine: "Always debugging, rarely sleeping.",
+      entered: false,
+    },
   ];

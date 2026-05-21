@@ -20,7 +20,6 @@ export default function Home() {
   const mapEmbedUrl =
     "https://www.google.com/maps?q=Tunturu+Garden+Resort+Shimoga+Karnataka&output=embed";
 
-
   const mapAppUrl = "https://maps.app.goo.gl/oWmhC8V61G3ehbdC7";
 
   const forceDownload = async (imageUrl, filename) => {
@@ -53,8 +52,13 @@ export default function Home() {
       {/* Header section */}
       <div className="w-full max-w-sm flex justify-between items-center mb-4 bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/10 shadow-lg">
         <div>
-          <h1 className="text-xl font-bold text-white flex items-center gap-1.5">
-            Hey, {currentUser.name.split(" ")[0]}!
+          <h1 className="text-xl font-bold flex items-center gap-1.5">
+            <span className="text-white">Hey,</span>
+
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-red-500">
+              {currentUser.name.split(" ")[0]}!
+            </span>
+
             <Sparkles
               size={20}
               className="text-amber-400 fill-amber-400/20 animate-pulse shrink-0"
@@ -118,7 +122,7 @@ export default function Home() {
             forceDownload(currentUser.QRImg, `${currentUser.name}_Entry_QR.jpg`)
           }
           disabled={isDownloading}
-          className="w-full py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center space-x-2 shadow-lg transition text-white font-bold disabled:opacity-50"
+          className="w-full py-3.5 bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center space-x-2 shadow-lg transition text-white font-bold disabled:opacity-50"
         >
           <QrCode size={20} />
           <span>{isDownloading ? "Downloading..." : "Download Entry QR"}</span>

@@ -59,7 +59,7 @@ export default function Login() {
       {showBalloons}
       {/*  && <PartyEffect /> */}
 
-      <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-full max-w-md border border-white/20 z-10">
+      <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-full max-w-md border-3 border-red-800 z-10">
         <h1 className="text-3xl font-extrabold text-center mb-2 text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-red-500">
           Senior Sendoff '26
         </h1>

@@ -94,7 +94,7 @@ export default function Scanner() {
       {/* Header */}
       <div className="w-full max-w-md flex justify-between items-center mb-6 bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/10 shadow-lg">
         <div>
-          <h1 className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">
+          <h1 className="text-xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-green-400 to-emerald-600">
             VIP Scanner
           </h1>
           <p className="text-xs font-bold tracking-widest text-white">
@@ -121,7 +121,7 @@ export default function Scanner() {
         ></div>
 
         {!isScanning && (
-          <div className="h-[300px] flex items-center justify-center bg-gray-900 text-white font-bold rounded-xl">
+          <div className="h-75 flex items-center justify-center bg-gray-900 text-white font-bold rounded-xl">
             Processing Scan... ⏳
           </div>
         )}
@@ -153,7 +153,7 @@ export default function Scanner() {
           <img
             src={scannedUser.invitationImage}
             alt="Guest Invitation"
-            className="w-full max-w-sm rounded-2xl border-4 border-green-500 shadow-[0_0_30px_rgba(34,197,94,0.4)] mb-8 object-cover aspect-[3/4]"
+            className="w-full max-w-sm rounded-2xl border-4 border-green-500 shadow-[0_0_30px_rgba(34,197,94,0.4)] mb-8 object-cover aspect-3/4"
           />
 
           <div className="flex flex-col w-full max-w-sm space-y-3">

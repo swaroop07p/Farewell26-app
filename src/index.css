@@ -153,3 +153,54 @@ body::after {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/* =========================================
+   Animated Glow Border (Bug-Free Layout)
+========================================= */
+
+.animated-glow-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 1rem; /* Matches Tailwind rounded-2xl */
+}
+
+.animated-glow-wrapper::before {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  animation: rotBGimg 3s linear infinite;
+  top: -20%;
+  left: 50%;
+  width: 140px; /* Width of the light beam */
+  height: 140%;
+  margin-left: -70px;
+  z-index: 1;
+}
+
+@keyframes rotBGimg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animated-glow-wrapper::after {
+  content: '';
+  position: absolute;
+  background: #111827; /* Matches Tailwind bg-gray-900 */
+  inset: 4px; /* Controls the thickness of the glow border */
+  border-radius: 0.8rem; /* Inner border radius */
+  z-index: 2;
+}
+
+/* This class protects your content from being squashed */
+.content-safe-area {
+  position: absolute;
+  inset: 4px; /* Must match the inset above */
+  z-index: 10;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+/* =========================================
+   Custom Animated Border Glow Effects ends here
+========================================= */

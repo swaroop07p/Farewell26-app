@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PartyEffect() {
   return (
-    <div className="fixed inset-0 pointer-events-none z-[9999] overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none z-9999 overflow-hidden">
 
       <style>
         {`

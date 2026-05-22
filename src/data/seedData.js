@@ -53,7 +53,8 @@ export const guestsData = [
     name: "ANAS",
     invitationImage: "",
     QRImg: "",
-    funnyLine: "Anas can turn a small story into a full movie with background music.",
+    funnyLine:
+      "Anas can turn a small story into a full movie with background music.",
     entered: false,
   },
   {
@@ -61,7 +62,8 @@ export const guestsData = [
     name: "RAMYASHREE S",
     invitationImage: "",
     QRImg: "",
-    funnyLine: "Ramyashree S says ‘I’ll be ready in 5 minutes’… legendary last words.",
+    funnyLine:
+      "Ramyashree S says ‘I’ll be ready in 5 minutes’… legendary last words.",
     entered: false,
   },
   {
@@ -69,7 +71,8 @@ export const guestsData = [
     name: "AISHWARYA BR",
     invitationImage: "",
     QRImg: "",
-    funnyLine: "Aishwarya B R enters the room like a celebrity, even if it’s just attendance time.",
+    funnyLine:
+      "Aishwarya B R enters the room like a celebrity, even if it’s just attendance time.",
     entered: false,
   },
   {
@@ -85,7 +88,8 @@ export const guestsData = [
     name: "BHOOMIKA KK",
     invitationImage: "",
     QRImg: "",
-    funnyLine: "Bhoomika K K can start cleaning the room and end up dancing instead.",
+    funnyLine:
+      "Bhoomika K K can start cleaning the room and end up dancing instead.",
     entered: false,
   },
   {
@@ -93,7 +97,8 @@ export const guestsData = [
     name: "IRFAN NABILAL RON",
     invitationImage: "",
     QRImg: "",
-    funnyLine: "IRFAN NABILAL RON sounds like a hero name, but still forgets where the phone is while holding it.",
+    funnyLine:
+      "IRFAN NABILAL RON sounds like a hero name, but still forgets where the phone is while holding it.",
     entered: false,
   },
   {
@@ -109,15 +114,72 @@ export const guestsData = [
     name: "ANANYA YADAGERE",
     invitationImage: "",
     QRImg: "",
-    funnyLine: "Ananya Yadagere acts busy even while doing absolutely nothing… true multitasking talent!",
+    funnyLine:
+      "Ananya Yadagere acts busy even while doing absolutely nothing… true multitasking talent!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI051",
+    name: "SPOORTHI",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Spoorthi makes plans with full excitement… and cancels them with even more excitement!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI052",
+    name: "SUNIDHI",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Sunidhi says I’m not hungry and then steals food from everyone’s plate.",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI024",
+    name: "KOMAL SINGH R",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Komal Singh R opens the notebook to study… then somehow ends up reorganizing the entire desk instead!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI038",
+    name: "RADIYA WASMA",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Radiya Wasma says ‘I’ll sleep early today’ like it’s a motivational quote every night!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI014",
+    name: "DHANUSH R KALKUR",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "DHANUSH R KALKUR checks the fridge every 10 minutes like new snacks might magically appear!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI005",
+    name: "ALVIA NORONHA",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Alvia Noronha can start telling one story and somehow include the entire history of the universe!",
     entered: false,
   },
   {
     usn: "A",
     name: "A",
-    invitationImage: "https://res.cloudinary.com/.../john-invite.jpg",
-    QRImg: "https://res.cloudinary.com/.../john-qr.jpg",
-    funnyLine: "Always debugging, rarely sleeping.",
+    invitationImage:
+      "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779295172/WhatsApp_Image_2026-05-16_at_7.36.00_PM_t5ppld.jpg",
+    QRImg:
+      "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779295535/WhatsApp_Image_2026-05-20_at_10.13.26_PM_h0aktu.jpg",
+    funnyLine: "Some funny line",
     entered: false,
   },
 ];

@@ -13,11 +13,10 @@ export default function FlipCard({ currentUser }) {
         
         {/* FRONT OF CARD */}
         <div 
-          className="absolute inset-0 shadow-2xl animated-glow-wrapper"
+          className="absolute inset-0 overflow-hidden shadow-2xl animated-glow-wrapper rounded-xl"
           style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         >
-          {/* Safe Area Wrapper - Prevents layout breaking */}
-          <div className="relative content-safe-area">
+          <div className="relative h-full content-safe-area">
             <img 
               src={currentUser.invitationImage} 
               alt="Invitation Front" 
@@ -31,33 +30,38 @@ export default function FlipCard({ currentUser }) {
 
         {/* BACK OF CARD */}
         <div 
-          className="absolute inset-0 shadow-2xl animated-glow-wrapper"
+          /* 🎨 THEME CONTROL: Card Back Glass Background */
+          /* Uses bg-[#020617]/80 to perfectly match the TextFlippingBoard and Party Title */
+          className="absolute inset-0 shadow-2xl rounded-xl bg-[#020617]/80 backdrop-blur-xl border border-cyan-500/30 overflow-hidden"
           style={{ 
             backfaceVisibility: 'hidden', 
             WebkitBackfaceVisibility: 'hidden',
-            transform: 'rotateY(180deg)' /* Critical fix for the dropping back-side bug */
+            transform: 'rotateY(180deg)' 
           }}
         >
-          {/* Safe Area Wrapper - Contains your original layout perfectly */}
-          <div className="flex flex-col items-center justify-between p-6 content-safe-area">
-            <h2 className="mb-2 text-xl font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-500 to-red-500">Your Entry Pass</h2>
+          <div className="flex flex-col items-center justify-between h-full p-6 content-safe-area">
+            {/* 🎨 THEME CONTROL: Back Card Header Text */}
+            <h2 className="mb-2 text-xl font-black tracking-widest text-transparent uppercase bg-clip-text bg-linear-to-r from-cyan-400 to-emerald-400 drop-shadow-md">
+              Your Entry Pass
+            </h2>
             
-            <div className="p-3 bg-white shadow-inner pointer-events-none rounded-xl">
-              <img src={currentUser.QRImg} alt="Entry QR Code" className="object-contain w-48 h-48" />
+            <div className="p-3 bg-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(34,211,238,0.2)] border border-white/20 pointer-events-none rounded-xl">
+              <img src={currentUser.QRImg} alt="Entry QR Code" className="object-contain w-48 h-48 bg-white rounded-lg mix-blend-screen" />
             </div>
-            <p className="mt-2 text-xs text-gray-400">Scan at the venue entrance</p>
+            <p className="mt-2 text-xs font-bold tracking-widest uppercase text-cyan-400/60">Scan at venue entrance</p>
 
-            <div className="w-full p-4 mt-4 space-y-3 border bg-white/5 border-white/10 rounded-xl">
-              <div className="flex items-center text-sm text-gray-200">
-                <Calendar className="w-4 h-4 mr-3 text-purple-400" />
+            {/* 🎨 THEME CONTROL: Information Box */}
+            <div className="w-full p-4 mt-4 space-y-3 border shadow-inner bg-black/40 border-white/10 rounded-xl">
+              <div className="flex items-center text-sm font-medium text-gray-200">
+                <Calendar className="w-4 h-4 mr-3 text-cyan-400" />
                 <span>May 26th, 2026</span>
               </div>
-              <div className="flex items-center text-sm text-gray-200">
-                <Clock className="w-4 h-4 mr-3 text-purple-400" />
+              <div className="flex items-center text-sm font-medium text-gray-200">
+                <Clock className="w-4 h-4 mr-3 text-emerald-400" />
                 <span>6:00 PM Onwards</span>
               </div>
-              <div className="flex items-center text-sm text-gray-200">
-                <MapPin className="w-4 h-4 mr-3 text-purple-400" />
+              <div className="flex items-center text-sm font-medium text-gray-200">
+                <MapPin className="w-4 h-4 mr-3 text-cyan-400" />
                 <span>Tunturu Garden Resort</span>
               </div>
             </div>

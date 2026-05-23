@@ -227,6 +227,60 @@ export const guestsData = [
     entered: false,
   },
   {
+    usn: "4JN22AI055",
+    name: "SUSHMA S KANABUR",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Sushma talks so fast that even Google Translate asks her to slow down!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI034",
+    name: "NIDHI KS",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Nidhi’s talent is saying I’ll be ready in 5 minutes and still making everyone wait for 30!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI023",
+    name: "KISHAN B",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Kishan studies so seriously before exams… for exactly 10 minutes!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI015",
+    name: "GM VAMSHI",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Vamshi enters the room like a hero, but forgets why he came there!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI044",
+    name: "ROHAN S GOWDRU",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Rohan’s biggest workout is searching for the TV remote after sitting down!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI001",
+    name: "ADITHI HS",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Adithi laughs at jokes before they even finish… just in case they’re funny!",
+    entered: false,
+  },
+  {
     usn: "A",
     name: "A",
     invitationImage:

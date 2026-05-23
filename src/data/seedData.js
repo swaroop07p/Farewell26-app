@@ -173,6 +173,60 @@ export const guestsData = [
     entered: false,
   },
   {
+    usn: "4JN22AI022",
+    name: "KHUSHAN GOWDA GH",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Khushan Gowda GH starts every group project with full confidence… and disappears exactly when work begins!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI019",
+    name: "JEEVITHA D",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Jeevitha D studies the timetable so seriously, but still asks, ‘What period is next?",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI009",
+    name: "CHITRALEKHA P",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "CHITRALEKHA P types ‘LOL’ in chats with a straight face like it’s office work!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI028",
+    name: "MEGHANA SM",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Meghana SM says ‘I’ll be ready in 5 minutes’… and even the calendar starts laughing!",
+    entered: false,
+  },
+  {
+    usn: "4JN21AI025",
+    name: "KRUTHI BR",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Kruthi B R checks the phone every 2 minutes like some celebrity is about to text personally!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI056",
+    name: "TANU",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Tanu can make serious situations funny just by saying ‘Wait, listen to me first!’",
+    entered: false,
+  },
+  {
     usn: "A",
     name: "A",
     invitationImage:

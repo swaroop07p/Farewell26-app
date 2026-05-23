@@ -1,143 +1,19 @@
 @import "tailwindcss";
 
-/* =========================================
-   Animated Aurora Gradient Background
-========================================= */
-
-:root {
-  --color-bg1: rgb(8, 10, 20);
-  --color-bg2: rgb(18, 12, 108);
-  --color1: 139, 92, 246;
-  --color2: 59, 130, 246;
-  --color3: 236, 72, 153;
-  --color4: 16, 185, 129;
-  --color5: 99, 102, 241;
-  --circle-size: 80%;
-  --blending: hard-light;
-}
-
-/* Main Body Background */
+/* 🎨 THEME CONTROL: Base Global Reset */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   min-height: 100vh;
   color: white;
-  background: linear-gradient(
-    135deg,
-    var(--color-bg1),
-    var(--color-bg2)
-  );
+  background-color: #090d1a; /* Enforce Deep Navy */
   position: relative;
-}
-
-/* Background Container */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background: linear-gradient(
-    40deg,
-    rgb(4, 7, 29),
-    rgb(17, 24, 39),
-    rgb(76, 29, 149)
-  );
-}
-
-/* Aurora Glow Layer */
-body::after {
-  content: "";
-  position: fixed;
-  inset: -10%;
-  z-index: -1;
-  filter: blur(80px);
-  opacity: 0.9;
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(var(--color1), 0.45) 0,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 30%,
-      rgba(var(--color2), 0.4) 0,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 50% 80%,
-      rgba(var(--color3), 0.35) 0,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 10% 70%,
-      rgba(var(--color4), 0.3) 0,
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 90% 90%,
-      rgba(var(--color5), 0.35) 0,
-      transparent 35%
-    );
-  animation: auroraMove 18s ease infinite alternate;
-}
-
-/* Smooth Floating Animation */
-@keyframes auroraMove {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-
-  25% {
-    transform: translate(40px, -30px) scale(1.1);
-  }
-
-  50% {
-    transform: translate(-30px, 20px) scale(1.15);
-  }
-
-  75% {
-    transform: translate(20px, 40px) scale(1.05);
-  }
-
-  100% {
-    transform: translate(-20px, -20px) scale(1);
-  }
-}
-
-/* =========================================
-   Balloon Animation
-========================================= */
-
-@keyframes floatUp {
-  0% {
-    bottom: -100px;
-    opacity: 1;
-    transform: scale(0.8) rotate(-5deg);
-  }
-
-  50% {
-    transform: scale(1.1) rotate(5deg);
-  }
-
-  100% {
-    bottom: 120vh;
-    opacity: 0;
-    transform: scale(1.2) rotate(-5deg);
-  }
-}
-
-.balloon-anim {
-  position: fixed;
-  animation: floatUp 2.8s ease-in forwards;
-  z-index: 9999;
-  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.5));
 }
 
 /* =========================================
    3D Flip Card Utilities
 ========================================= */
-
 .perspective-1000 {
   perspective: 1000px;
 }
@@ -157,22 +33,22 @@ body::after {
 /* =========================================
    Animated Glow Border (Bug-Free Layout)
 ========================================= */
-
 .animated-glow-wrapper {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  border-radius: 1rem; /* Matches Tailwind rounded-2xl */
+  border-radius: 1rem; 
 }
 
 .animated-glow-wrapper::before {
   content: '';
   position: absolute;
-  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  /* 🎨 THEME CONTROL: Flip Card Glow Beam - Updated to Cyan/Emerald */
+  background-image: linear-gradient(180deg, rgb(34, 211, 238), rgb(16, 185, 129));
   animation: rotBGimg 3s linear infinite;
   top: -20%;
   left: 50%;
-  width: 140px; /* Width of the light beam */
+  width: 140px; 
   height: 140%;
   margin-left: -70px;
   z-index: 1;
@@ -186,21 +62,16 @@ body::after {
 .animated-glow-wrapper::after {
   content: '';
   position: absolute;
-  background: #111827; /* Matches Tailwind bg-gray-900 */
-  inset: 4px; /* Controls the thickness of the glow border */
-  border-radius: 0.8rem; /* Inner border radius */
+  background: #020617; /* Deep Navy Inner Card */
+  inset: 4px; 
+  border-radius: 0.8rem; 
   z-index: 2;
 }
 
-/* This class protects your content from being squashed */
 .content-safe-area {
   position: absolute;
-  inset: 4px; /* Must match the inset above */
+  inset: 4px; 
   z-index: 10;
   border-radius: 0.8rem;
   overflow: hidden;
 }
-
-/* =========================================
-   Custom Animated Border Glow Effects ends here
-========================================= */

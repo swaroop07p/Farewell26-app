@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "../utils/cn";
 
-// Pool of random matrix tracking characters for the tumble phase
 const SCRAMBLE_CHARS = "X018$#@!%&?*+=#";
 
-// Map color tokens to glowing Tailwind presets matching your design theme
 const COLOR_MAP = {
   red: { border: "border-red-500/40 text-red-400 bg-red-950/40 shadow-[0_0_8px_rgba(239,68,68,0.2)]" },
   orange: { border: "border-orange-500/40 text-orange-400 bg-orange-950/40 shadow-[0_0_8px_rgba(249,115,22,0.2)]" },
@@ -17,58 +15,55 @@ const COLOR_MAP = {
 
 const COLOR_KEYS = Object.keys(COLOR_MAP);
 
-export function TextFlippingBoard({ text, className }) {
+export function TextFlippingBoard({ text, direction = "next", className }) {
   const [displayLines, setDisplayLines] = useState([]);
   const [scrambleTrigger, setScrambleTrigger] = useState(0);
 
   useEffect(() => {
-    // Standardize line breaks if any exist
     const formatted = text.replace(/\\n/g, "\n");
     const targetLines = formatted.split("\n");
 
-    // Process each line word by word to apply a distinct random color per word block
-    const parsedLines = targetLines.map(line => {
-      const lineCells = [];
+    let globalCharIdx = 0; 
+
+    const parsedLines = targetLines.map((line, lineIdx) => {
       const words = line.split(" ");
       
-      // Tracks the color used for the previous word on this line
       let lastColorKey = null;
+      const colorCounts = {}; 
 
-      words.forEach((word, wordIdx) => {
+      return words.map((word, wordIdx) => {
         let randomColorKey = lastColorKey;
         
-        // 🛡️ ADJACENT COLOR PROTECTION FIX
-        // Keeps picking a random color key until it is DIFFERENT from the last word's color
-        while (randomColorKey === lastColorKey) {
+        let attempts = 0;
+        while (
+          (randomColorKey === lastColorKey || (colorCounts[randomColorKey] >= 3)) &&
+          attempts < 20
+        ) {
           randomColorKey = COLOR_KEYS[Math.floor(Math.random() * COLOR_KEYS.length)];
+          attempts++;
         }
         
-        // Update the pointer tracking variable for the next word evaluation cycle
         lastColorKey = randomColorKey;
+        colorCounts[randomColorKey] = (colorCounts[randomColorKey] || 0) + 1;
         const wordColorStyle = COLOR_MAP[randomColorKey].border;
 
-        // Process every single letter character inside this isolated word block
+        const wordCells = [];
         for (let j = 0; j < word.length; j++) {
-          lineCells.push({
+          wordCells.push({
+            id: `${lineIdx}-${wordIdx}-${j}`,
             final: word[j],
             current: SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)],
             isRevealed: false,
-            customColor: wordColorStyle // Locks the same color across all letters of this word
+            customColor: wordColorStyle,
+            globalIdx: globalCharIdx++ 
           });
         }
 
-        // Re-inject the separating spacer gap box if it's not the final trailing word
-        if (wordIdx < words.length - 1) {
-          lineCells.push({
-            final: " ",
-            current: " ",
-            isRevealed: true,
-            customColor: null
-          });
-        }
+        return {
+          wordIdx,
+          cells: wordCells
+        };
       });
-
-      return lineCells;
     });
 
     setDisplayLines(parsedLines);
@@ -82,16 +77,18 @@ export function TextFlippingBoard({ text, className }) {
 
       setDisplayLines(prevLines =>
         prevLines.map(line =>
-          line.map(cell => {
-            if (cell.isRevealed) return cell;
-
-            const looseMatch = Math.random() < step / maxSteps || step === maxSteps;
-            return {
-              ...cell,
-              current: looseMatch ? cell.final : SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)],
-              isRevealed: looseMatch
-            };
-          })
+          line.map(wordObj => ({
+            ...wordObj,
+            cells: wordObj.cells.map(cell => {
+              if (cell.isRevealed) return cell;
+              const looseMatch = Math.random() < step / maxSteps || step === maxSteps;
+              return {
+                ...cell,
+                current: looseMatch ? cell.final : SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)],
+                isRevealed: looseMatch
+              };
+            })
+          }))
         )
       );
 
@@ -103,47 +100,70 @@ export function TextFlippingBoard({ text, className }) {
 
   return (
     <div className={cn(
-      "relative mx-auto w-full max-w-sm rounded-xl p-4 flex flex-col justify-center items-center gap-2 font-mono min-h-[95px] shadow-2xl transition-all duration-300",
+      "relative mx-auto w-full max-w-sm rounded-xl p-4 flex flex-col justify-center items-center font-mono min-h-[95px] shadow-2xl transition-all duration-300",
       "bg-[#020617]/50 backdrop-blur-md border border-white/10",
       className
     )}>
-      {displayLines.map((line, lineIdx) => (
-        <div key={`${lineIdx}-${scrambleTrigger}`} className="flex flex-wrap items-center justify-center gap-1">
-          {line.map((cell, charIdx) => {
-            if (cell.current === " ") {
-              return <div key={`space-${charIdx}`} className="w-2.5" />;
-            }
-
-            return (
-              <div
-                key={`${cell.current}-${charIdx}`}
-                style={{
-                  animation: `tumbleFlip 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards`,
-                  animationDelay: `${charIdx * 20}ms`, // Staggered reveal animation wave
-                  transformStyle: "preserve-3d"
-                }}
-                className={cn(
-                  "w-5 h-8 bg-black/40 border rounded-md flex items-center justify-center relative overflow-hidden transition-all duration-200",
-                  cell.isRevealed
-                    ? cell.customColor + " font-black" // Uniform color applied to this specific word block
-                    : "border-cyan-500/40 text-cyan-400 font-bold shadow-[0_0_15px_rgba(6,182,212,0.2)]"
-                )}
-              >
-                <div className="absolute inset-x-0 top-1/2 h-[1px] bg-black/40 z-20" />
-                <span className="z-10 text-sm leading-none tracking-normal uppercase select-none">
-                  {cell.current}
-                </span>
+      {/* ✨ SWIPE ANIMATION FIX ✨
+        By adding key={scrambleTrigger}, React rebuilds this block every swipe, 
+        triggering our smooth physical slide animations perfectly!
+      */}
+      <div 
+        key={scrambleTrigger} 
+        className={cn(
+          "w-full flex flex-col items-center justify-center gap-y-2",
+          direction === "next" ? "animate-slide-next" : "animate-slide-prev"
+        )}
+      >
+        {displayLines.map((line, lineIdx) => (
+          <div key={lineIdx} className="flex flex-wrap items-center justify-center w-full gap-x-3 gap-y-2">
+            {line.map((wordObj) => (
+              <div key={wordObj.wordIdx} className="flex gap-1 flex-nowrap">
+                {wordObj.cells.map((cell) => (
+                  <div
+                    key={cell.id}
+                    style={{
+                      animation: `tumbleFlip 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards`,
+                      animationDelay: `${cell.globalIdx * 20}ms`,
+                      transformStyle: "preserve-3d"
+                    }}
+                    className={cn(
+                      "w-5 h-8 bg-black/40 border rounded-md flex items-center justify-center relative overflow-hidden shrink-0",
+                      cell.isRevealed
+                        ? cell.customColor + " font-black"
+                        : "border-cyan-500/40 text-cyan-400 font-bold shadow-[0_0_15px_rgba(6,182,212,0.2)]"
+                    )}
+                  >
+                    <div className="absolute inset-x-0 top-1/2 h-[1px] bg-black/40 z-20" />
+                    <span className="z-10 text-sm leading-none tracking-normal uppercase select-none">
+                      {cell.current}
+                    </span>
+                  </div>
+                ))}
               </div>
-            );
-          })}
-        </div>
-      ))}
+            ))}
+          </div>
+        ))}
+      </div>
 
       <style>{`
         @keyframes tumbleFlip {
           0% { transform: rotateX(-90deg) scale(0.95); filter: brightness(0.4); }
           100% { transform: rotateX(0deg) scale(1); filter: brightness(1); }
         }
+        
+        /* Smooth Slide Animations */
+        @keyframes slideNext {
+          0% { opacity: 0; transform: translateX(25px); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slidePrev {
+          0% { opacity: 0; transform: translateX(-25px); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+        
+        .animate-slide-next { animation: slideNext 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
+        .animate-slide-prev { animation: slidePrev 0.4s cubic-bezier(0.23, 1, 0.32, 1) forwards; }
       `}</style>
     </div>
   );

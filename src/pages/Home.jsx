@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useCallback, useMemo } from "react";
+import React, { useContext, useState, useEffect, useMemo } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Download, QrCode, Gift } from "lucide-react";
 import FlipCard from "../components/FlipCard";
@@ -8,18 +8,23 @@ export default function Home() {
   const { currentUser } = useContext(AuthContext);
   const [isDownloading, setIsDownloading] = useState(false);
   const [msgIdx, setMsgIdx] = useState(0);
+  
+  // Track swipe animation direction
+  const [slideDirection, setSlideDirection] = useState("next");
+
+  // Swipe Tracking States
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   if (!currentUser) return null;
 
   const mapEmbedUrl = "https://www.google.com/maps?q=Tunturu+Garden+Resort+Shimoga+Karnataka&output=embed";
   const mapAppUrl = "https://maps.app.goo.gl/oWmhC8V61G3ehbdC7";
 
-  // Extracts and combines user statements dynamically using the native funnyLine property key
   const funMessages = useMemo(() => {
     const rawLineData = currentUser.funnyLine;
     let extractedPersonalLines = [];
 
-    // Smart Validation: Checks if funnyLine is an Array list or a plain Text string
     if (Array.isArray(rawLineData)) {
       extractedPersonalLines = rawLineData;
     } else if (typeof rawLineData === "string" && rawLineData.trim() !== "") {
@@ -28,7 +33,6 @@ export default function Home() {
       extractedPersonalLines = ["Always debugging, rarely sleeping."];
     }
 
-    // Appends the global rotational pool items cleanly to the end
     return [
       ...extractedPersonalLines,
       "Commit message: 'Fixed bugs, added new ones'",
@@ -38,21 +42,51 @@ export default function Home() {
       "My biggest achievement in engineering: opening PDF and pretending to study",
       "Internal marks are more mysterious than Bermuda Triangle",
       "Bro studies one night before exam and still says ‘I’m not prepared.’",
-      "Engineering students don’t say ‘I’m busy’…we say ‘Bro assignment submission da",
+      "Engineering students don’t say ‘I’m busy’…we say ‘Bro assignment submission da’",
       "The real survivor of engineering is not students… it’s the printer near college.",
       "Bro our semester moves faster than our internet speed",
-      "During viva, even my own name sounds unfamiliar",
+      "During viva, even my own name sounds unfamiliar"
     ];
   }, [currentUser.funnyLine]);
 
-  const next = useCallback(() => {
-    setMsgIdx((i) => (i + 1) % funMessages.length);
-  }, [funMessages.length]);
-
   useEffect(() => {
-    const id = setInterval(next, 6000); // Transitions blocks smoothly every 6 seconds
+    const id = setInterval(() => {
+      setSlideDirection("next"); // Auto-play always slides "next"
+      setMsgIdx((i) => (i + 1) % funMessages.length);
+    }, 6000);
     return () => clearInterval(id);
-  }, [next]);
+  }, [funMessages.length, msgIdx]); 
+
+  const minSwipeDistance = 40;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches ? e.targetTouches[0].clientX : e.clientX);
+  };
+
+  const onTouchMove = (e) => {
+    if (touchStart !== null) {
+      setTouchEnd(e.targetTouches ? e.targetTouches[0].clientX : e.clientX);
+    }
+  };
+
+  const onTouchEndHandler = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+
+    if (distance > minSwipeDistance) {
+      // Swiped Left -> View Previous
+      setSlideDirection("prev");
+      setMsgIdx((i) => (i - 1 + funMessages.length) % funMessages.length);
+    } else if (distance < -minSwipeDistance) {
+      // Swiped Right -> View Next
+      setSlideDirection("next");
+      setMsgIdx((i) => (i + 1) % funMessages.length);
+    }
+    
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
 
   const forceDownload = async (imageUrl, filename) => {
     try {
@@ -60,14 +94,12 @@ export default function Home() {
       const response = await fetch(imageUrl, { mode: "cors" });
       const blob = await response.blob();
       const blobUrl = window.URL.createObjectURL(blob);
-
       const link = document.createElement("a");
       link.href = blobUrl;
       link.download = filename;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-
       window.URL.revokeObjectURL(blobUrl);
       setIsDownloading(false);
     } catch (error) {
@@ -82,13 +114,27 @@ export default function Home() {
       <div className="relative z-10 flex flex-col items-center w-full">
         
         {/* HEADER CONTAINER */}
-        <div className="flex flex-col items-center justify-center w-full max-w-sm mb-6 text-center">
+        <div className="flex flex-col items-center justify-center w-full max-w-sm mb-8 text-center">
           <h1 className="mb-2 text-3xl font-extrabold tracking-wider text-transparent uppercase bg-clip-text bg-linear-to-r from-cyan-400 to-emerald-400 drop-shadow-md">
             Hey, {currentUser.name.split(" ")[0]}!
           </h1>
           
-          <div className="w-full flex items-center justify-center min-h-[90px] mt-2 mb-4">
-            <TextFlippingBoard text={funMessages[msgIdx]} />
+          <div 
+            className="w-full flex flex-col items-center justify-center min-h-[90px] mt-2 relative cursor-grab active:cursor-grabbing"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEndHandler}
+            onMouseDown={onTouchStart}
+            onMouseMove={onTouchMove}
+            onMouseUp={onTouchEndHandler}
+            onMouseLeave={onTouchEndHandler}
+          >
+            {/* Passes the tracking direction dynamically to the board components */}
+            <TextFlippingBoard text={funMessages[msgIdx]} direction={slideDirection} />
+            
+            <div className="absolute -bottom-5 text-[9px] font-black tracking-widest text-cyan-400/40 uppercase pointer-events-none drop-shadow-md">
+              ⟵ Swipe ⟶
+            </div>
           </div>
         </div>
 

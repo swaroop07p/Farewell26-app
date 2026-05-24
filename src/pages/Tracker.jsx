@@ -111,8 +111,10 @@ export default function Tracker() {
                 }`}
               >
                 <div className="flex items-center">
+                  {/* 🛡️ THE PROFILE IMAGE AVATAR MOUNT: 
+                      Points cleanly to guest.profileImage, falling back securely to an auto-seed bot vector if missing */}
                   <img
-                    src={guest.invitationImage}
+                    src={guest.profileImage || `https://api.dicebear.com/7.x/bottts/svg?seed=${guest.name}`}
                     alt={guest.name}
                     className="object-cover w-12 h-12 mr-4 border rounded-full shadow-md border-cyan-500/30"
                   />

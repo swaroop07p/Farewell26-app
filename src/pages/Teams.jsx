@@ -81,7 +81,7 @@ export default function Teams() {
             onClick={generateTeams}
             disabled={isGenerating}
             // 🎨 THEME CONTROL: Cyan/Emerald Button
-            className="w-full mb-6 py-4 bg-linear-to-r from-cyan-500 to-emerald-600 hover:from-cyan-400 hover:to-emerald-500 text-gray-900 font-extrabold rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.4)] flex items-center justify-center space-x-2 transition disabled:opacity-50"
+            className="w-full mb-6 py-4 bg-linear-to-r from-cyan-500 to-emerald-600 hover:from-cyan-400 hover:to-emerald-400 text-gray-900 font-extrabold rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.4)] flex items-center justify-center space-x-2 transition disabled:opacity-50"
           >
             <Dices size={24} className={isGenerating ? "animate-spin" : ""} /> 
             <span>{isGenerating ? "Shuffling..." : "Randomize Teams"}</span>
@@ -130,7 +130,13 @@ export default function Teams() {
                 <div className="grid grid-cols-1 gap-2 p-4">
                   {team.members.map((member, mIndex) => (
                     <div key={mIndex} className="flex items-center p-2 space-x-3 transition border rounded-lg bg-white/5 hover:bg-white/10 border-white/5">
-                      <img src={member.invitationImage} alt={member.name} className="object-cover border rounded-full shadow-md w-9 h-9 border-cyan-500/20" />
+                      {/* 🛡️ THE PROFILE IMAGE AVATAR MOUNT: 
+                          Swapped invitationImage for profileImage, safely using a backup seed vector if missing */}
+                      <img 
+                        src={member.profileImage || `https://api.dicebear.com/7.x/bottts/svg?seed=${member.name}`} 
+                        alt={member.name} 
+                        className="object-cover border rounded-full shadow-md w-9 h-9 border-cyan-500/20" 
+                      />
                       <div>
                         <p className="text-sm font-bold text-white">{member.name}</p>
                         <p className="text-[10px] text-cyan-400/70 uppercase tracking-widest">{member.usn}</p>

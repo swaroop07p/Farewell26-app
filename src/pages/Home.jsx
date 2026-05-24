@@ -129,7 +129,6 @@ export default function Home() {
             onMouseUp={onTouchEndHandler}
             onMouseLeave={onTouchEndHandler}
           >
-            {/* Passes the tracking direction dynamically to the board components */}
             <TextFlippingBoard text={funMessages[msgIdx]} direction={slideDirection} />
             
             <div className="absolute -bottom-5 text-[9px] font-black tracking-widest text-cyan-400/40 uppercase pointer-events-none drop-shadow-md">
@@ -150,45 +149,63 @@ export default function Home() {
         {/* 3D Flip Card */}
         <FlipCard currentUser={currentUser} />
 
-        {/* ACTION BUTTONS */}
-        <div className="flex flex-col w-full max-w-sm mt-8 space-y-3">
+        {/* ACTION BUTTONS - SIMPLIFIED TRANSLUCENT GLASS THEME */}
+        <div className="flex flex-col w-full max-w-sm gap-3 mt-8">
+          
+          {/* 🌊 BUTTON 1: TRANSLUCENT CYAN GLASS */}
           <button
             onClick={() => forceDownload(currentUser.invitationImage, `${currentUser.name}_Farewell_Invite.jpg`)}
             disabled={isDownloading}
-            className="w-full py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl flex items-center justify-center space-x-2 transition text-white font-semibold backdrop-blur-md shadow-md disabled:opacity-50"
+            className="w-full py-4 relative bg-cyan-950/20 backdrop-blur-md border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/10 text-cyan-400 hover:text-cyan-300 font-extrabold tracking-wider uppercase rounded-xl shadow-[0_0_15px_rgba(6,182,212,0.1)] transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:pointer-events-none"
           >
-            <Download size={20} />
+            <Download size={18} className="text-cyan-400 shrink-0" />
             <span>{isDownloading ? "Downloading..." : "Download Invitation Card"}</span>
           </button>
 
+          {/* 🌿 BUTTON 2: TRANSLUCENT EMERALD GLASS */}
           <button
             onClick={() => forceDownload(currentUser.QRImg, `${currentUser.name}_Entry_QR.jpg`)}
             disabled={isDownloading}
-            className="w-full py-3.5 bg-linear-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 rounded-xl flex items-center justify-center space-x-2 shadow-[0_0_15px_rgba(0,242,165,0.4)] transition text-gray-900 font-extrabold disabled:opacity-50"
+            className="w-full py-4 relative bg-emerald-950/20 backdrop-blur-md border border-emerald-500/30 hover:border-emerald-400 hover:bg-emerald-500/10 text-emerald-400 hover:text-emerald-300 font-extrabold tracking-wider uppercase rounded-xl shadow-[0_0_15px_rgba(16,185,129,0.1)] transition-all duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:pointer-events-none"
           >
-            <QrCode size={20} />
+            <QrCode size={18} className="text-emerald-400 shrink-0" />
             <span>{isDownloading ? "Downloading..." : "Download Entry QR"}</span>
           </button>
+
         </div>
 
-        {/* MAP */}
-        <div className="w-full max-w-sm mt-8 overflow-hidden bg-white border shadow-2xl rounded-2xl border-white/20">
-          <iframe
-            src={mapEmbedUrl}
-            width="100%"
-            height="220"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Venue Map"
-          ></iframe>
+        {/* 🗺️ THEME CONTROL: TRANSLUCENT CYBERPUNK MAP COMPONENT */}
+        <div className="w-full max-w-sm mt-8 overflow-hidden border bg-[#020617]/50 backdrop-blur-md shadow-2xl rounded-2xl border-white/10">
+          
+          {/* ⚡ CSS Map Filter Wrapper: Inverts standard lighting matrix map data into beautiful cyberpunk dark mode lines */}
+          <div className="w-full h-[220px] overflow-hidden invert-[90%] hue-rotate-[195deg] saturate-[140%] brightness-[90%] contrast-[95%]">
+            <iframe
+              src={mapEmbedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Venue Map"
+            ></iframe>
+          </div>
 
-          <a href={mapAppUrl} target="_blank" rel="noreferrer" className="block p-4 text-center transition hover:bg-gray-50 decoration-none">
-            <div className="mb-1 text-lg font-bold text-gray-900">Venue Location</div>
-            <div className="text-sm font-medium text-cyan-600">Click to open in Google Maps</div>
+          <a 
+            href={mapAppUrl} 
+            target="_blank" 
+            rel="noreferrer" 
+            className="block p-4 text-center transition bg-linear-to-b from-transparent to-white/[0.02] hover:bg-white/5 border-t border-white/5 decoration-none"
+          >
+            <div className="mb-1 text-lg font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400 uppercase drop-shadow-[0_0_5px_rgba(34,211,238,0.2)]">
+              Venue Location
+            </div>
+            <div className="text-xs font-bold tracking-widest uppercase text-cyan-400/70">
+              Click to open in Google Maps
+            </div>
           </a>
         </div>
+        
       </div>
     </div>
   );

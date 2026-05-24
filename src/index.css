@@ -31,26 +31,30 @@ body {
 }
 
 /* =========================================
-   Animated Glow Border (Bug-Free Layout)
+   Animated Glow Border (Perfected 2:3 Non-Clipping Layout)
 ========================================= */
+
 .animated-glow-wrapper {
   position: absolute;
   inset: 0;
   overflow: hidden;
   border-radius: 1rem; 
+  transform: translateZ(0);
 }
 
 .animated-glow-wrapper::before {
   content: '';
   position: absolute;
-  /* 🎨 THEME CONTROL: Flip Card Glow Beam - Updated to Cyan/Emerald */
+  /* 🎨 THEME CONTROL: Glow Beam Colors (Cyan/Emerald) */
   background-image: linear-gradient(180deg, rgb(34, 211, 238), rgb(16, 185, 129));
   animation: rotBGimg 3s linear infinite;
-  top: -20%;
+  
+  /* 📐 2:3 GEOMETRY FIX: Extra vertical canvas space to sweep the long lower corners cleanly */
+  top: -75%;
   left: 50%;
-  width: 140px; 
-  height: 140%;
-  margin-left: -70px;
+  width: 150px; 
+  height: 250%; 
+  margin-left: -75px; /* Symmetrically balanced center line alignment */
   z-index: 1;
 }
 
@@ -62,16 +66,23 @@ body {
 .animated-glow-wrapper::after {
   content: '';
   position: absolute;
-  background: #020617; /* Deep Navy Inner Card */
-  inset: 4px; 
+  background: #020617; /* Deep Navy Interior Theme Card Backing */
+  inset: 4px; /* Tracks the precise width of the glowing line border */
   border-radius: 0.8rem; 
   z-index: 2;
 }
 
 .content-safe-area {
   position: absolute;
-  inset: 4px; 
+  inset: 4px; /* MUST match the track inset above perfectly */
   z-index: 10;
   border-radius: 0.8rem;
-  overflow: hidden;
+  overflow: hidden; /* 🛡️ CRITICAL BOUNDARY FIX: Clips the template image edge internally so it can NEVER overlap the light track */
+}
+
+/* 📐 FORCES THE TALL RETRO TEMPLATE TO REMAIN BOUNDED */
+.content-safe-area img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important; /* Preserves the full graphic template borders cleanly inside the 2:3 shape */
 }

@@ -14,7 +14,7 @@ export const guestsData = [
       "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779295172/WhatsApp_Image_2026-05-16_at_7.36.00_PM_t5ppld.jpg",
     QRImg:
       "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779295535/WhatsApp_Image_2026-05-20_at_10.13.26_PM_h0aktu.jpg",
-    funnyLine: "Some funny line",
+    funnyLine: "I am a Topper",
     entered: false,
   },
   {
@@ -287,7 +287,7 @@ export const guestsData = [
       "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779295172/WhatsApp_Image_2026-05-16_at_7.36.00_PM_t5ppld.jpg",
     QRImg:
       "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779295535/WhatsApp_Image_2026-05-20_at_10.13.26_PM_h0aktu.jpg",
-    funnyLine: "Some funny line",
+    funnyLine: "I am a Topper",
     entered: false,
   },
 ];

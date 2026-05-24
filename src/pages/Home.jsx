@@ -14,14 +14,34 @@ export default function Home() {
   const mapEmbedUrl = "https://www.google.com/maps?q=Tunturu+Garden+Resort+Shimoga+Karnataka&output=embed";
   const mapAppUrl = "https://maps.app.goo.gl/oWmhC8V61G3ehbdC7";
 
+  // Extracts and combines user statements dynamically using the native funnyLine property key
   const funMessages = useMemo(() => {
+    const rawLineData = currentUser.funnyLine;
+    let extractedPersonalLines = [];
+
+    // Smart Validation: Checks if funnyLine is an Array list or a plain Text string
+    if (Array.isArray(rawLineData)) {
+      extractedPersonalLines = rawLineData;
+    } else if (typeof rawLineData === "string" && rawLineData.trim() !== "") {
+      extractedPersonalLines = [rawLineData];
+    } else {
+      extractedPersonalLines = ["Always debugging, rarely sleeping."];
+    }
+
+    // Appends the global rotational pool items cleanly to the end
     return [
-      currentUser.funnyLine || "Always debugging, rarely sleeping.", 
-      "{R}Error 404: Sleep schedule not found.",       
-      "{Y}Powered by 90% caffeine and 10% panic.",    
-      "{G}I survived engineering. Barely.",            
-      "{B}Just here for the free food and pics.",      
-      "{W}Ctrl + Z my entire college lifecycle."       
+      ...extractedPersonalLines,
+      "Commit message: 'Fixed bugs, added new ones'",
+      "Assignments are temporary, Screenshots are permanent",
+      "It's not a bug, it's a feature",
+      "Our attendance is lower than our phone battery",
+      "My biggest achievement in engineering: opening PDF and pretending to study",
+      "Internal marks are more mysterious than Bermuda Triangle",
+      "Bro studies one night before exam and still says ‘I’m not prepared.’",
+      "Engineering students don’t say ‘I’m busy’…we say ‘Bro assignment submission da",
+      "The real survivor of engineering is not students… it’s the printer near college.",
+      "Bro our semester moves faster than our internet speed",
+      "During viva, even my own name sounds unfamiliar",
     ];
   }, [currentUser.funnyLine]);
 
@@ -30,7 +50,7 @@ export default function Home() {
   }, [funMessages.length]);
 
   useEffect(() => {
-    const id = setInterval(next, 6000);
+    const id = setInterval(next, 6000); // Transitions blocks smoothly every 6 seconds
     return () => clearInterval(id);
   }, [next]);
 
@@ -58,9 +78,7 @@ export default function Home() {
   };
 
   return (
-    // THE FIX: Enforced bg-transparent here and removed the old hardcoded blobs
     <div className="relative flex flex-col items-center min-h-screen px-4 pt-8 overflow-x-hidden overflow-y-auto bg-transparent pb-28">
-      
       <div className="relative z-10 flex flex-col items-center w-full">
         
         {/* HEADER CONTAINER */}

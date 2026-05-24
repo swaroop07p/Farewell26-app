@@ -86,3 +86,28 @@ body {
   height: 100% !important;
   object-fit: fill !important; /* Preserves the full graphic template borders cleanly inside the 2:3 shape */
 }
+
+/* =========================================
+   CRAZY PARTY AMBIENT BACKGROUND GLOWS
+========================================= */
+
+@keyframes partyOrbit1 {
+  0% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  33% { transform: translate(40px, -60px) scale(1.2) rotate(120deg); }
+  66% { transform: translate(-30px, 30px) scale(0.8) rotate(240deg); }
+  100% { transform: translate(0px, 0px) scale(1) rotate(360deg); }
+}
+
+@keyframes partyOrbit2 {
+  0% { transform: translate(0px, 0px) scale(1.1) rotate(360deg); }
+  50% { transform: translate(-50px, 50px) scale(0.8) rotate(180deg); }
+  100% { transform: translate(0px, 0px) scale(1.1) rotate(0deg); }
+}
+
+.animate-party-glow-1 {
+  animation: partyOrbit1 10s infinite linear;
+}
+
+.animate-party-glow-2 {
+  animation: partyOrbit2 12s infinite ease-in-out;
+}

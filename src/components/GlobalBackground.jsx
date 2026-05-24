@@ -4,49 +4,74 @@ export default function GlobalBackground() {
   return (
     <>
       {/* 🎨 THEME CONTROL: Base App Background Color */}
-      <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-[#090d1a]">
+      <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-[#020617]">
         
-        {/* 🎨 THEME CONTROL: Large Ambient Blobs (Slow, background foundation) */}
-        <div className="absolute w-[60vw] h-[60vw] max-w-[500px] max-h-[500px] bg-cyan-500/20 rounded-full blur-[80px] blob-one"></div>
-        <div className="absolute w-[55vw] h-[55vw] max-w-[450px] max-h-[450px] bg-emerald-500/15 rounded-full blur-[80px] blob-two"></div>
+        {/* 🎨 THEME CONTROL: Massive Neon Energetic Orbs */}
+        <div className="absolute w-[85vw] h-[85vw] max-w-[600px] max-h-[600px] bg-cyan-500/25 rounded-full blur-[70px] party-blob-one"></div>
+        <div className="absolute w-[80vw] h-[80vw] max-w-[550px] max-h-[550px] bg-emerald-500/20 rounded-full blur-[80px] party-blob-two"></div>
         
-        {/* 🎨 THEME CONTROL: Medium/Small Fast Blobs (Active mobile motion) */}
-        <div className="absolute w-[40vw] h-[40vw] max-w-[300px] max-h-[300px] bg-blue-600/20 rounded-full blur-[60px] blob-three"></div>
-        <div className="absolute w-[30vw] h-[30vw] max-w-[200px] max-h-[200px] bg-cyan-400/20 rounded-full blur-[50px] blob-four"></div>
-        <div className="absolute w-[25vw] h-[25vw] max-w-[180px] max-h-[180px] bg-emerald-400/20 rounded-full blur-[40px] blob-five"></div>
+        {/* Active Mid-layer highlights for maximum movement on mobile screen views */}
+        <div className="absolute w-[60vw] h-[60vw] max-w-[400px] max-h-[400px] bg-blue-500/25 rounded-full blur-[60px] party-blob-three"></div>
+        <div className="absolute w-[50vw] h-[50vw] max-w-[300px] max-h-[300px] bg-cyan-400/20 rounded-full blur-[50px] party-blob-four"></div>
+        <div className="absolute w-[45vw] h-[45vw] max-w-[250px] max-h-[250px] bg-emerald-400/25 rounded-full blur-[45px] party-blob-five"></div>
       </div>
 
       <style>{`
-        /* 🎨 THEME CONTROL: Animation Speed & Paths */
-        .blob-one { top: -10%; left: -10%; animation: wander1 12s infinite cubic-bezier(0.4, 0, 0.2, 1); }
-        .blob-two { bottom: -10%; right: -10%; animation: wander2 14s infinite cubic-bezier(0.4, 0, 0.2, 1); }
-        .blob-three { top: 20%; right: 20%; animation: wander3 9s infinite cubic-bezier(0.4, 0, 0.2, 1); }
-        .blob-four { bottom: 30%; left: 10%; animation: wander4 7s infinite linear alternate; }
-        .blob-five { top: 40%; left: 40%; animation: wander5 8s infinite ease-in-out alternate; }
+        /* 🎨 DYNAMIC PARTY CONTROL: Faster speeds, structural scaling, and wild hue shifts */
+        .party-blob-one { 
+          top: -10%; 
+          left: -10%; 
+          animation: partyWander1 8s infinite linear; 
+        }
+        .party-blob-two { 
+          bottom: -10%; 
+          right: -10%; 
+          animation: partyWander2 9s infinite ease-in-out; 
+        }
+        .party-blob-three { 
+          top: 25%; 
+          right: -5%; 
+          animation: partyWander3 7s infinite cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .party-blob-four { 
+          bottom: 20%; 
+          left: -5%; 
+          animation: partyWander4 5s infinite linear alternate; 
+        }
+        .party-blob-five { 
+          top: 35%; 
+          left: 30%; 
+          animation: partyWander5 6s infinite ease-in-out alternate; 
+        }
 
-        /* Expanded vw/vh ranges so motion is highly visible on narrow phone screens */
-        @keyframes wander1 {
+        /* 🚀 THE CRAZY MOTION ENGINE MATH */
+        @keyframes partyWander1 {
+          0% { transform: translate(0, 0) scale(1) rotate(0deg); filter: hue-rotate(0deg) blur(70px); }
+          50% { transform: translate(50vw, 30vh) scale(1.3) rotate(180deg); filter: hue-rotate(60deg) blur(50px); }
+          100% { transform: translate(-5vw, 70vh) scale(0.9) rotate(360deg); filter: hue-rotate(0deg) blur(70px); }
+        }
+        
+        @keyframes partyWander2 {
+          0% { transform: translate(0, 0) scale(1.1) rotate(360deg); filter: hue-rotate(0deg) blur(80px); }
+          50% { transform: translate(-55vw, -45vh) scale(0.8) rotate(180deg); filter: hue-rotate(-60deg) blur(90px); }
+          100% { transform: translate(5vw, -75vh) scale(1.1) rotate(0deg); filter: hue-rotate(0deg) blur(80px); }
+        }
+        
+        @keyframes partyWander3 {
           0% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(60vw, 40vh) scale(1.2); }
-          100% { transform: translate(-10vw, 80vh) scale(0.9); }
+          33% { transform: translate(-35vw, 40vh) scale(1.25); }
+          66% { transform: translate(20vw, -15vh) scale(0.75); }
+          100% { transform: translate(0, 0) scale(1); }
         }
-        @keyframes wander2 {
-          0% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(-60vw, -50vh) scale(1.3); }
-          100% { transform: translate(10vw, -80vh) scale(0.8); }
+        
+        @keyframes partyWander4 {
+          0% { transform: translate(0, 0) scale(0.85); filter: hue-rotate(0deg); }
+          100% { transform: translate(65vw, -60vh) scale(1.35); filter: hue-rotate(90deg); }
         }
-        @keyframes wander3 {
-          0% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(-40vw, 60vh) scale(0.8); }
-          100% { transform: translate(30vw, -20vh) scale(1.4); }
-        }
-        @keyframes wander4 {
-          0% { transform: translate(0, 0) scale(0.9); }
-          100% { transform: translate(70vw, -70vh) scale(1.2); }
-        }
-        @keyframes wander5 {
-          0% { transform: translate(0, 0) scale(1.1); }
-          100% { transform: translate(-50vw, 50vh) scale(0.7); }
+        
+        @keyframes partyWander5 {
+          0% { transform: translate(0, 0) scale(1.2); }
+          100% { transform: translate(-45vw, 45vh) scale(0.75); }
         }
       `}</style>
     </>

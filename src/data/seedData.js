@@ -42,7 +42,7 @@ export const guestsData = [
   {
     usn: "4JN22AI032",
     name: "NEERADHI",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779634883/WhatsApp_Image_2026-05-24_at_8.13.53_PM_mp0uje.jpg",
     QRImg: "",
     funnyLine:
       "Neeradhi’s superpower is opening the fridge and forgetting why.",

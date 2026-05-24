@@ -2,7 +2,7 @@ export const guestsData = [
   {
     usn: "4JN24AI100", // The Admin
     name: "ADMIN BOSS",
-    invitationImage: "https://res.cloudinary.com/.../admin-invite.jpg",
+    invitationImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779634883/WhatsApp_Image_2026-05-24_at_8.13.53_PM_mp0uje.jpg",
     QRImg: "https://res.cloudinary.com/.../admin-qr.jpg", // Pre-generated QR!
     funnyLine: "I control the gates!",
     entered: false, // This will be the live toggle
@@ -11,7 +11,7 @@ export const guestsData = [
     usn: "4JN24AI058",
     name: "SWAROOP P",
     invitationImage:
-      "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779295172/WhatsApp_Image_2026-05-16_at_7.36.00_PM_t5ppld.jpg",
+      "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779634883/WhatsApp_Image_2026-05-24_at_8.13.53_PM_mp0uje.jpg",
     QRImg:
       "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779295535/WhatsApp_Image_2026-05-20_at_10.13.26_PM_h0aktu.jpg",
     funnyLine: "I am a Topper",

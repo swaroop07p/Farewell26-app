@@ -62,13 +62,11 @@ export default function Teams() {
   };
 
   return (
-    // 🎨 THEME CONTROL: Notice bg-transparent here so the global blobs show through!
     <div className="flex flex-col items-center min-h-screen px-4 pt-8 bg-transparent pb-28">
       <div className="relative z-10 w-full max-w-md">
         
         {/* Glassmorphism Header */}
         <div className="bg-[#020617]/50 backdrop-blur-md rounded-2xl p-6 mb-6 border border-white/10 text-center shadow-[0_0_15px_rgba(0,0,0,0.5)]">
-          {/* 🎨 THEME CONTROL: Cyan/Emerald Text Gradient */}
           <h1 className="mb-2 text-2xl font-extrabold tracking-widest text-transparent uppercase bg-clip-text bg-linear-to-r from-cyan-400 to-emerald-400 drop-shadow-md">
             Party Teams
           </h1>
@@ -80,8 +78,7 @@ export default function Teams() {
           <button 
             onClick={generateTeams}
             disabled={isGenerating}
-            // 🎨 THEME CONTROL: Cyan/Emerald Button
-            className="w-full mb-6 py-4 bg-linear-to-r from-cyan-500 to-emerald-600 hover:from-cyan-400 hover:to-emerald-400 text-gray-900 font-extrabold rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.4)] flex items-center justify-center space-x-2 transition disabled:opacity-50"
+            className="w-full mb-6 py-4 bg-linear-to-r from-cyan-500 to-emerald-600 hover:from-cyan-400 hover:to-emerald-500 text-gray-900 font-extrabold rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.4)] flex items-center justify-center space-x-2 transition disabled:opacity-50"
           >
             <Dices size={24} className={isGenerating ? "animate-spin" : ""} /> 
             <span>{isGenerating ? "Shuffling..." : "Randomize Teams"}</span>
@@ -129,17 +126,19 @@ export default function Teams() {
                 {/* Team Members List */}
                 <div className="grid grid-cols-1 gap-2 p-4">
                   {team.members.map((member, mIndex) => (
-                    <div key={mIndex} className="flex items-center p-2 space-x-3 transition border rounded-lg bg-white/5 hover:bg-white/10 border-white/5">
-                      {/* 🛡️ THE PROFILE IMAGE AVATAR MOUNT: 
-                          Swapped invitationImage for profileImage, safely using a backup seed vector if missing */}
+                    <div key={mIndex} className="flex items-center p-3 transition border rounded-lg bg-white/5 hover:bg-white/10 border-white/5">
+                      
+                      {/* 📐 SIZE ADJUSTMENT: Updated layout sizes from w-12 h-12 to w-16 h-16 */}
                       <img 
                         src={member.profileImage || `https://api.dicebear.com/7.x/bottts/svg?seed=${member.name}`} 
                         alt={member.name} 
-                        className="object-cover border rounded-full shadow-md w-9 h-9 border-cyan-500/20" 
+                        loading="lazy"
+                        decoding="async"
+                        className="object-cover w-16 h-16 mr-4 border rounded-full shadow-md border-cyan-500/30 shrink-0" 
                       />
                       <div>
-                        <p className="text-sm font-bold text-white">{member.name}</p>
-                        <p className="text-[10px] text-cyan-400/70 uppercase tracking-widest">{member.usn}</p>
+                        <p className="text-base font-extrabold text-white">{member.name}</p>
+                        <p className="text-[11px] text-cyan-400/70 uppercase tracking-widest mt-0.5">{member.usn}</p>
                       </div>
                     </div>
                   ))}

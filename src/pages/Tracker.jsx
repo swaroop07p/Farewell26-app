@@ -52,11 +52,10 @@ export default function Tracker() {
   });
 
   return (
-    // 🎨 THEME CONTROL: bg-transparent wrapper
     <div className="flex flex-col items-center min-h-screen px-4 pt-8 pb-24 bg-transparent">
       <div className="relative z-10 w-full max-w-md">
         
-        {/* 🎨 THEME CONTROL: Header Stats Glassmorphism */}
+        {/* Header Stats */}
         <div className="bg-[#020617]/50 backdrop-blur-md rounded-2xl p-6 mb-6 border border-white/10 text-center shadow-[0_0_15px_rgba(0,0,0,0.5)]">
           <h1 className="mb-2 text-2xl font-extrabold tracking-widest text-transparent uppercase bg-clip-text bg-linear-to-r from-cyan-400 to-emerald-400 drop-shadow-md">
             Live Entry Tracker
@@ -91,7 +90,6 @@ export default function Tracker() {
             placeholder="Search by Name or USN..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            // 🎨 THEME CONTROL: Search Bar
             className="w-full pl-12 pr-4 py-3.5 bg-[#020617]/60 backdrop-blur-md border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition shadow-lg font-medium tracking-wide"
           />
         </div>
@@ -103,7 +101,6 @@ export default function Tracker() {
             filteredGuests.map((guest) => (
               <div
                 key={guest.id}
-                // 🎨 THEME CONTROL: Guest Card Active States
                 className={`flex items-center justify-between p-4 rounded-xl border backdrop-blur-md transition-all duration-300 ${
                   guest.entered 
                     ? "bg-emerald-500/10 border-emerald-500/40 shadow-[0_0_15px_rgba(16,185,129,0.15)]" 
@@ -111,16 +108,17 @@ export default function Tracker() {
                 }`}
               >
                 <div className="flex items-center">
-                  {/* 🛡️ THE PROFILE IMAGE AVATAR MOUNT: 
-                      Points cleanly to guest.profileImage, falling back securely to an auto-seed bot vector if missing */}
+                  {/* 📐 SIZE ADJUSTMENT: Updated layout sizes from w-12 h-12 to w-16 h-16 */}
                   <img
                     src={guest.profileImage || `https://api.dicebear.com/7.x/bottts/svg?seed=${guest.name}`}
                     alt={guest.name}
-                    className="object-cover w-12 h-12 mr-4 border rounded-full shadow-md border-cyan-500/30"
+                    loading="lazy"
+                    decoding="async"
+                    className="object-cover w-16 h-16 mr-4 border rounded-full shadow-md border-cyan-500/30 shrink-0"
                   />
                   <div>
-                    <p className={`font-extrabold ${guest.entered ? "text-emerald-400" : "text-white"}`}>{guest.name}</p>
-                    <p className="text-[10px] text-cyan-100/60 font-bold tracking-widest uppercase mt-0.5">{guest.usn}</p>
+                    <p className={`font-extrabold text-base ${guest.entered ? "text-emerald-400" : "text-white"}`}>{guest.name}</p>
+                    <p className="text-[11px] text-cyan-100/60 font-bold tracking-widest uppercase mt-0.5">{guest.usn}</p>
                   </div>
                 </div>
 

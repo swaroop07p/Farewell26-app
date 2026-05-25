@@ -22,13 +22,17 @@ export const AuthProvider = ({ children }) => {
   // Login function
   const login = async (name, usn) => {
     try {
-      // NEW: Instant Bypass for the Camera Device!
-      if (usn === "4JN24AI101" && name === "CAMERA") {
-        const cameraUser = { usn: "4JN24AI101", name: "CAMERA", isScanner: true, isAdmin: true };
-        setCurrentUser(cameraUser);
-        localStorage.setItem('farewellUser', JSON.stringify(cameraUser));
-        return { success: true, isScanner: true };
-      }
+      // 🛡️ ROLE BASED ACCESS: The Camera Team Login (Gatekeepers)
+    // Inside AuthContext.jsx -> login()
+    if (usn === "4JN24AI101" && name === "CAMERA") {
+      const cameraUser = { usn: "4JN24AI101", name: "CAMERA", isScanner: true, isAdmin: false };
+      setCurrentUser(cameraUser);
+      localStorage.setItem('farewellUser', JSON.stringify(cameraUser));
+      
+      // 👉 MAKE SURE THIS SAYS isScanner: true!
+      return { success: true, isScanner: true }; 
+    }
+
       const q = query(
         collection(db, "guests"), 
         where("usn", "==", usn.toUpperCase()),
@@ -40,13 +44,13 @@ export const AuthProvider = ({ children }) => {
       if (!querySnapshot.empty) {
         const userData = { id: querySnapshot.docs[0].id, ...querySnapshot.docs[0].data() };
         userData.isAdmin = (userData.usn === ADMIN_USN);
+        userData.isScanner = false;
         
         setCurrentUser(userData);
         localStorage.setItem('farewellUser', JSON.stringify(userData));
         return { success: true };
       } else {
         return { success: false, message: "Niv party attend agake agalla sorry!! Details correct agi enter madi." };
-        // User not found. Check Name and USN.
       }
     } catch (error) {
       console.error("Login Error:", error);
@@ -54,7 +58,6 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // Logout function
   const logout = () => {
     setCurrentUser(null);
     localStorage.removeItem('farewellUser');

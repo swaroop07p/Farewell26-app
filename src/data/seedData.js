@@ -2,8 +2,8 @@ export const guestsData = [
   {
     usn: "4JN24AI100", // The Admin
     name: "ADMIN",
-    invitationImage: "https://res.cloudinary.com/.../admin-invite.jpg",
-    QRImg: "https://res.cloudinary.com/.../admin-qr.jpg", // Pre-generated QR!
+    invitationImage: "",
+    QRImg: "", // Pre-generated QR!
     funnyLine: "I control the gates!",
     entered: false, // This will be the live toggle
   },
@@ -406,7 +406,7 @@ export const guestsData = [
     name: "SAHANA DEVADIGA",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779643552/Screenshot_20260524_200128_com_hihonor_photos_ListAlbumPickerActivity_-_Sahana_Devadiga_tmfrjr.jpg",
     invitationImage: "",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729631/SAHANA_f2if22.jpg",
     funnyLine:
       "Sahana’s expressions during lectures deserve their own reaction sticker pack!",
     entered: false,

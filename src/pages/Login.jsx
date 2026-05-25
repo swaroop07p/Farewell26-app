@@ -18,7 +18,8 @@ export default function Login() {
 
   useEffect(() => {
     if (currentUser) {
-      if (currentUser.isScanner) navigate("/scanner");
+      // 🐛 BUG FIXED: Route to tracker, not scanner!
+      if (currentUser.isScanner) navigate("/tracker");
       else navigate("/home");
     }
   }, [currentUser, navigate]);
@@ -38,8 +39,9 @@ export default function Login() {
     const result = await login(cleanedName, cleanedUsn);
 
     if (result.success) {
+      // 🐛 BUG FIXED: Route to tracker, not scanner!
       if (result.isScanner) {
-        navigate("/scanner");
+        navigate("/tracker");
         return;
       }
 
@@ -60,9 +62,6 @@ export default function Login() {
     <div className="relative flex items-center justify-center min-h-screen px-4 overflow-hidden bg-transparent">
       {showBalloons && <PartyEffect />}
 
-      {/* 📐 THE RESIZE FIX: 
-          Swapped 'h-120' out for 'min-h-[480px] h-auto'. Added 'transition-all duration-300' 
-          so that it expands smoothly when the error banner pushes down the inputs. */}
       <div className="w-full max-w-md min-h-[480px] h-auto perspective-1000 transition-all duration-300 ease-in-out">
         <div
           className={`relative w-full h-full min-h-[480px] transition-transform duration-700 transform-style-3d ${isFlipped ? "rotate-y-180" : ""}`}
@@ -88,8 +87,6 @@ export default function Login() {
 
           {/* BACK SIDE */}
           <div
-            /* 📐 THE BACK SIDE HEIGHT FIX:
-               Changed absolute structure to handle dynamic content height changes seamlessly. */
             className="absolute inset-0 bg-[#020617]/50 backdrop-blur-xl p-8 rounded-2xl shadow-[0_0_25px_rgba(0,0,0,0.8)] w-full h-auto min-h-[480px] border border-white/10 z-10 backface-hidden rotate-y-180 flex flex-col justify-center"
           >
             <h1 className="mb-2 text-3xl font-extrabold tracking-widest text-center text-transparent uppercase bg-clip-text bg-linear-to-r from-cyan-400 to-emerald-400">
@@ -132,7 +129,7 @@ export default function Login() {
 
               <button
                 type="submit"
-                className="w-full py-3.5 px-4 mt-2 bg-linear-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-gray-900 font-extrabold text-lg rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.4)] transform transition hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-4 mt-2 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-gray-900 font-extrabold text-lg rounded-xl shadow-[0_0_15px_rgba(34,211,238,0.4)] transform transition hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
               >
                 <span>Unlock Invitation</span>
                 <KeyRound size={22} className="text-gray-900 shrink-0" />

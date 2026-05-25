@@ -28,7 +28,7 @@ export const guestsData = [
     invitationImage:
       "",
     QRImg:
-      "",
+      "https://res.cloudinary.com/dkiddriws/image/upload/v1779729630/SHREYAS_lkaj0j.jpg",
     funnyLine:
       "Shreyas S studies for 5 minutes and takes a 2-hour motivational break.",
     entered: false,
@@ -51,7 +51,7 @@ export const guestsData = [
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779645664/copy_of_solojpg_-_md_anas_kowez4.jpg",
     invitationImage: "",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729625/Anas_lrpfrm.jpg",
     funnyLine:
       "Anas can turn a small story into a full movie with background music.",
     entered: false,
@@ -62,7 +62,7 @@ export const guestsData = [
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696941/Ramyashree_S_-_Ramyashree_S_topfd7.jpg",
     invitationImage: "",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729619/RAMYASHREE_lqiqjp.jpg",
     funnyLine:
       "Ramyashree S says ‘I’ll be ready in 5 minutes’… legendary last words.",
     entered: false,
@@ -84,7 +84,7 @@ export const guestsData = [
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697498/20251224_163224_1_-_Harshitha_N_R_vuw6he.jpg",
     invitationImage: "",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729622/Harshitha_bipnem.jpg",
     funnyLine: "Harshitha NR laughs at jokes before the punchline arrives.",
     entered: false,
   },
@@ -94,8 +94,8 @@ export const guestsData = [
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696269/IMG_20260522_131620_-_Bhoomika_KK_nutbsz.jpg",
     invitationImage:
-      "https://drive.google.com/file/d/1tm_yfV3Fe5ct8yQOZmVFJJ8JKZJhHH5F/view?usp=sharing",
-    QRImg: "",
+      "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729623/Bhoomika_trdnij.jpg",
     funnyLine:
       "Bhoomika K K can start cleaning the room and end up dancing instead.",
     entered: false,
@@ -568,6 +568,16 @@ export const guestsData = [
     QRImg: "",
     funnyLine:
       "Varshini can laugh at her own jokes for so long that others start laughing too!",
+    entered: false,
+  },
+  {
+    usn: "4JN22AI047",
+    name: "SAHANA SK",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779730929/Sahana_S_K_-_Sahana_S_K_ihmhc3.jpg",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "Sahana enters quietly, but her laughter announces her presence to the whole room!",
     entered: false,
   },
 ];

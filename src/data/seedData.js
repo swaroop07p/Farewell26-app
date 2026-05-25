@@ -354,7 +354,7 @@ export const guestsData = [
   {
     usn: "4JN22AI003",
     name: "AISHWARYA R",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697703/Aishwarya_R_hvjcvf.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -363,7 +363,7 @@ export const guestsData = [
   },
   {
     usn: "4JN22AI063",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697261/IMG_9320_-_Yashwanth_rs5dci.jpg",
     name: "YASHWANTH PATEL",
     invitationImage: "",
     QRImg: "",
@@ -374,7 +374,7 @@ export const guestsData = [
   {
     usn: "4JN22AI011",
     name: "DEEKSHITH HV",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779645454/IMG_20260516_114922_-_Deekshith_H_V_io9c75.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -384,7 +384,7 @@ export const guestsData = [
   {
     usn: "4JN22AI037",
     name: "PRAJWAL S",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779644682/copy_of_prajwal_s_-_prajwal_s_zfs6ae.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -394,7 +394,7 @@ export const guestsData = [
   {
     usn: "4JN22AI042",
     name: "RAKSHA HV",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779645499/copy_of_raksha_h_v_-_raksha_h_v_emsplw.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -404,7 +404,7 @@ export const guestsData = [
   {
     usn: "4JN22AI046",
     name: "SAHANA DEVADIGA",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779643552/Screenshot_20260524_200128_com_hihonor_photos_ListAlbumPickerActivity_-_Sahana_Devadiga_tmfrjr.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -414,7 +414,7 @@ export const guestsData = [
   {
     usn: "4JN22AI031",
     name: "NAGASHREE SP",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697593/Nagashree_-_Nagashree_S_P_khfr9z.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -424,7 +424,7 @@ export const guestsData = [
   {
     usn: "4JN22AI004",
     name: "AKASH NV",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728440/IMG-20250326-WA0017_-_Akash_Nv_ljge1u.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -434,7 +434,7 @@ export const guestsData = [
   {
     usn: "4JN22AI029",
     name: "MOHAMMED AMAN",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727970/Mohammed_Aman_-_Mohammed_Aman_u0lxhp.heic",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -444,7 +444,7 @@ export const guestsData = [
   {
     usn: "4JN22AI010",
     name: "DARSHAN RL",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728401/IMG-20260309-WA0045_-_Darshan_R_L_dygwpd.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -454,7 +454,7 @@ export const guestsData = [
   {
     usn: "4JN22AI020",
     name: "JYESHTA M GORKOD",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727815/jyeshta_-_Jyeshta_m_Gorkod_nknwvz.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -464,7 +464,7 @@ export const guestsData = [
   {
     usn: "4JN22AI064",
     name: "PRITANYA MM",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728307/IMG-20260423-WA0043_-_Pritanya_MM_qda29g.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -474,7 +474,7 @@ export const guestsData = [
   {
     usn: "4JN22AI039",
     name: "RAHUL BIDARE E",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728350/IMG-20260519-WA0000_-_Rahul_Bidare_E_h0hyth.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine: "Rahul says ‘I’m on the way’ while still deciding what to wear!",
@@ -483,7 +483,7 @@ export const guestsData = [
   {
     usn: "4JN22AI021",
     name: "JYOTHI MATAD S",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727557/IMG20241120185311_-_Jyothi_Matad_jltoki.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -493,7 +493,7 @@ export const guestsData = [
   {
     usn: "4JN22AI036",
     name: "PRAJWAL R KOLEKAR",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727893/396094a5-5b91-4843-b611-c50e78b7a21d_-_Prajwal_R_Kolekar_o1vsnm.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -503,7 +503,7 @@ export const guestsData = [
   {
     usn: "4JN22AI059",
     name: "VAISHNAVI M VAIDYA",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727588/20260514_122755_-_Vaishnavi_M_Vaidya_upetiw.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -513,7 +513,7 @@ export const guestsData = [
   {
     usn: "4JN22AI045",
     name: "SAHANA N",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728235/InShot_20260506_123210540_-_Sahana.N_Sahana.N_bvf46l.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -523,7 +523,7 @@ export const guestsData = [
   {
     usn: "4JN23AI403",
     name: "SOMANNA S",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727660/20250611_200022_-_Somu_S_vyphpa.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -533,7 +533,7 @@ export const guestsData = [
   {
     usn: "4JN23AI404",
     name: "VINUTH AD",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728270/DSC_0259-1_2_1_-_Vinuth_A_D_cvdc8n.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -543,7 +543,7 @@ export const guestsData = [
   {
     usn: "4JN22AI027",
     name: "MANOJ PATIL",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728107/Manoj_Patil_-_Manoj_Patil_s83tm6.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -553,7 +553,7 @@ export const guestsData = [
   {
     usn: "4JN22AI012",
     name: "DEEPIKA TM",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727728/IMG20250519164657_-_Deepika_Nandi_azmb2o.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -563,7 +563,7 @@ export const guestsData = [
   {
     usn: "4JN22AI060",
     name: "VARSHINI SB",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728667/IMG_2699_-_Varshini_S_B_mjtfeb.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:

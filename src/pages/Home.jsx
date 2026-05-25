@@ -35,17 +35,14 @@ export default function Home() {
 
     return [
       ...extractedPersonalLines,
-      "Commit message: 'Fixed bugs, added new ones'",
       "Assignments are temporary, Screenshots are permanent",
-      "It's not a bug, it's a feature",
       "Our attendance is lower than our phone battery",
       "My biggest achievement in engineering: opening PDF and pretending to study",
       "Internal marks are more mysterious than Bermuda Triangle",
       "Bro studies one night before exam and still says ‘I’m not prepared.’",
       "Engineering students don’t say ‘I’m busy’…we say ‘Bro assignment submission da’",
       "The real survivor of engineering is not students… it’s the printer near college.",
-      "Bro our semester moves faster than our internet speed",
-      "During viva, even my own name sounds unfamiliar"
+      "Bro our semester moves faster than our internet speed"
     ];
   }, [currentUser.funnyLine]);
 

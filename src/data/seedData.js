@@ -66,7 +66,7 @@ export const guestsData = [
   {
     usn: "4JN22AI043",
     name: "RAMYASHREE S",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696941/Ramyashree_S_-_Ramyashree_S_topfd7.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -76,7 +76,7 @@ export const guestsData = [
   {
     usn: "4JN22AI002",
     name: "AISHWARYA BR",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696902/SAVE_20260521_231451_-_Aishwarya_BR_jaj10v.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -86,7 +86,7 @@ export const guestsData = [
   {
     usn: "4JN22AI017",
     name: "HARSHITHA NR",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697498/20251224_163224_1_-_Harshitha_N_R_vuw6he.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine: "Harshitha NR laughs at jokes before the punchline arrives.",
@@ -95,7 +95,7 @@ export const guestsData = [
   {
     usn: "4JN22AI008",
     name: "BHOOMIKA KK",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696269/IMG_20260522_131620_-_Bhoomika_KK_nutbsz.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -115,7 +115,7 @@ export const guestsData = [
   {
     usn: "4JN22AI054",
     name: "SURAJ SG",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697898/Suraj_Photo_1st_new_-_SURAJ_SG_pk8cog.png",
     invitationImage: "",
     QRImg: "",
     funnyLine: "Suraj SG’s alarm clock deserves an award for never giving up.",
@@ -124,7 +124,7 @@ export const guestsData = [
   {
     usn: "4JN22AI006",
     name: "ANANYA YADAGERE",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696174/Screenshot_20260522_202704_Gallery_-_Ananya_Yadagere_wfv9jo.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -144,7 +144,7 @@ export const guestsData = [
   {
     usn: "4JN22AI052",
     name: "SUNIDHI",
-    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779639023/Sunidhi_-_Sunidhi_mq3ynm.jpg",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696999/Sunidhi_-_Sunidhi_meq9hy.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -154,7 +154,7 @@ export const guestsData = [
   {
     usn: "4JN22AI024",
     name: "KOMAL SINGH R",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697178/IMG_20260516_175700_-_KOMAL_SINGH.R_aog86w.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -184,7 +184,7 @@ export const guestsData = [
   {
     usn: "4JN22AI005",
     name: "ALVIA NORONHA",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697990/IMG_5960_-_Alvia_Noronha_s69atc.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -224,7 +224,7 @@ export const guestsData = [
   {
     usn: "4JN22AI028",
     name: "MEGHANA SM",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697776/SAVE_20251122_175238_-_Meghana_S_M_iuxbxu.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -264,7 +264,7 @@ export const guestsData = [
   {
     usn: "4JN22AI034",
     name: "NIDHI KS",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696735/Nidhi_KS_-_Nidhi_K_S_syhgsu.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -304,7 +304,7 @@ export const guestsData = [
   {
     usn: "4JN22AI001",
     name: "ADITHI HS",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697452/Adithi_H_S_-_Adithi_H_S_tpwi04.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:

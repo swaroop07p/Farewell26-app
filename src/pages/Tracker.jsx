@@ -87,7 +87,7 @@ export default function Tracker() {
   const enteredCount = guests.filter((g) => g.entered).length;
 
   const filteredGuests = guests.filter((guest) => {
-    if (guest.usn === "ADMIN_BOSS_USN" || guest.name === "ADMIN BOSS" || guest.name === "CAMERA") return false;
+    if (guest.usn === "4JN24AI100" || guest.name === "ADMIN BOSS" || guest.name === "CAMERA") return false;
     return guest.name.toLowerCase().includes(searchQuery.toLowerCase()) || guest.usn.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
@@ -105,7 +105,7 @@ export default function Tracker() {
           </h1>
           <div className="flex justify-center mt-4 space-x-8 text-white">
             <div>
-              <p className="text-3xl font-black text-cyan-400">{Math.max(0, totalGuests - 2)}</p>
+              <p className="text-3xl font-black text-cyan-400">{Math.max(0, totalGuests - 1)}</p>
               <p className="mt-1 text-xs font-bold tracking-widest uppercase text-cyan-100/60">Total</p>
             </div>
             <div>

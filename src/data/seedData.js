@@ -334,6 +334,7 @@ export const guestsData = [
   {
     usn: "4JN22AI058",
     name: "USHA M",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697082/IMG_1001_-_Usha_M_L_woiqtx.jpg",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -343,6 +344,7 @@ export const guestsData = [
   {
     usn: "4JN22AI016",
     name: "HARSHIKA N",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728194/harshika.HEIC_-_Harshika_N_gkaq2l.heic",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -352,6 +354,7 @@ export const guestsData = [
   {
     usn: "4JN22AI003",
     name: "AISHWARYA R",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -360,6 +363,7 @@ export const guestsData = [
   },
   {
     usn: "4JN22AI063",
+    profileImage: "",
     name: "YASHWANTH PATEL",
     invitationImage: "",
     QRImg: "",
@@ -370,6 +374,7 @@ export const guestsData = [
   {
     usn: "4JN22AI011",
     name: "DEEKSHITH HV",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -379,6 +384,7 @@ export const guestsData = [
   {
     usn: "4JN22AI037",
     name: "PRAJWAL S",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -388,6 +394,7 @@ export const guestsData = [
   {
     usn: "4JN22AI042",
     name: "RAKSHA HV",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -397,6 +404,7 @@ export const guestsData = [
   {
     usn: "4JN22AI046",
     name: "SAHANA DEVADIGA",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -406,6 +414,7 @@ export const guestsData = [
   {
     usn: "4JN22AI031",
     name: "NAGASHREE SP",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -415,6 +424,7 @@ export const guestsData = [
   {
     usn: "4JN22AI004",
     name: "AKASH NV",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -424,6 +434,7 @@ export const guestsData = [
   {
     usn: "4JN22AI029",
     name: "MOHAMMED AMAN",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -433,6 +444,7 @@ export const guestsData = [
   {
     usn: "4JN22AI010",
     name: "DARSHAN RL",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -442,6 +454,7 @@ export const guestsData = [
   {
     usn: "4JN22AI020",
     name: "JYESHTA M GORKOD",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -451,6 +464,7 @@ export const guestsData = [
   {
     usn: "4JN22AI064",
     name: "PRITANYA MM",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -460,6 +474,7 @@ export const guestsData = [
   {
     usn: "4JN22AI039",
     name: "RAHUL BIDARE E",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine: "Rahul says ‘I’m on the way’ while still deciding what to wear!",
@@ -468,6 +483,7 @@ export const guestsData = [
   {
     usn: "4JN22AI021",
     name: "JYOTHI MATAD S",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -477,6 +493,7 @@ export const guestsData = [
   {
     usn: "4JN22AI036",
     name: "PRAJWAL R KOLEKAR",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -486,6 +503,7 @@ export const guestsData = [
   {
     usn: "4JN22AI059",
     name: "VAISHNAVI M VAIDYA",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -495,6 +513,7 @@ export const guestsData = [
   {
     usn: "4JN22AI045",
     name: "SAHANA N",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -504,6 +523,7 @@ export const guestsData = [
   {
     usn: "4JN23AI403",
     name: "SOMANNA S",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -513,6 +533,7 @@ export const guestsData = [
   {
     usn: "4JN23AI404",
     name: "VINUTH AD",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -522,6 +543,7 @@ export const guestsData = [
   {
     usn: "4JN22AI027",
     name: "MANOJ PATIL",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -531,6 +553,7 @@ export const guestsData = [
   {
     usn: "4JN22AI012",
     name: "DEEPIKA TM",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:
@@ -540,6 +563,7 @@ export const guestsData = [
   {
     usn: "4JN22AI060",
     name: "VARSHINI SB",
+    profileImage: "",
     invitationImage: "",
     QRImg: "",
     funnyLine:

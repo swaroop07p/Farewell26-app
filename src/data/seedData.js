@@ -305,7 +305,7 @@ export const guestsData = [
     usn: "4JN22AI001",
     name: "ADITHI HS",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697452/Adithi_H_S_-_Adithi_H_S_tpwi04.jpg",
-    invitationImage: "",
+    invitationImage: "https://drive.google.com/file/d/1XgEtw02y1fqr5TN1iXCkfspzVw54cGwq/view?usp=sharing",
     QRImg: "",
     funnyLine:
       "Adithi laughs at jokes before they even finish… just in case they’re funny!",

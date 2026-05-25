@@ -34,7 +34,7 @@ export const guestsData = [
   {
     usn: "4JN22AI050",
     name: "SHREYAS S",
-    profileImage: "",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779643096/ChatGPT_Image_May_20_2026_10_10_58_PM_-_Shreyas_Gayakwad_eu8jzc.png",
     invitationImage:
       "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779383374/WhatsApp_Image_2026-05-21_at_10.34.06_PM_1_hupohe.jpg",
     QRImg:

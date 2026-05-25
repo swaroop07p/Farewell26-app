@@ -96,7 +96,7 @@ export const guestsData = [
     usn: "4JN22AI008",
     name: "BHOOMIKA KK",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696269/IMG_20260522_131620_-_Bhoomika_KK_nutbsz.jpg",
-    invitationImage: "",
+    invitationImage: "https://drive.google.com/file/d/1tm_yfV3Fe5ct8yQOZmVFJJ8JKZJhHH5F/view?usp=sharing",
     QRImg: "",
     funnyLine:
       "Bhoomika K K can start cleaning the room and end up dancing instead.",

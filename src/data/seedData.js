@@ -580,4 +580,14 @@ export const guestsData = [
       "Sahana enters quietly, but her laughter announces her presence to the whole room!",
     entered: false,
   },
+  {
+    usn: "4JN22AI026",
+    name: "Manjappa Gowda G R",
+    profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779736737/Manjappa_Gowda_-_Manjappa_Gowda_kvuttt.jpg",
+    invitationImage: "",
+    QRImg: "",
+    funnyLine:
+      "",
+    entered: false,
+  },
 ];

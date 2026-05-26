@@ -8,7 +8,7 @@ import { CheckCircle2, Circle, UploadCloud, Search, UserCheck, XCircle, AlertTri
 export default function Tracker() {
   const [guests, setGuests] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedGuest, setSelectedGuest] = useState(null); // Controls the pop-up modal
+  const [selectedGuest, setSelectedGuest] = useState(null);
   const { currentUser } = useContext(AuthContext);
 
   // REAL-TIME SYNC: Every phone updates instantly
@@ -21,37 +21,30 @@ export default function Tracker() {
     return () => unsubscribe();
   }, []);
 
-  // Opens the Confirmation Modal
   const openConfirmation = (guest) => {
-    // Only Admins or Camera Team can interact with the list
     if (!currentUser?.isAdmin && !currentUser?.isScanner) return;
-    
-    // Light tap vibration
     if (navigator.vibrate) navigator.vibrate(50);
     setSelectedGuest(guest);
   };
 
-  // Executes the Database Update
   const confirmToggleStatus = async (guestId, newStatus) => {
     try {
       await updateDoc(doc(db, "guests", guestId), { entered: newStatus });
       
-      // Haptic & Audio Feedback based on action
       if (newStatus === true) {
-        if (navigator.vibrate) navigator.vibrate([100, 50, 100]); // Success pattern
+        if (navigator.vibrate) navigator.vibrate([100, 50, 100]); 
         playSuccessBeep();
       } else {
-        if (navigator.vibrate) navigator.vibrate([200, 100, 200]); // Undo/Warning pattern
+        if (navigator.vibrate) navigator.vibrate([200, 100, 200]); 
       }
       
-      setSelectedGuest(null); // Close modal
+      setSelectedGuest(null); 
     } catch (error) {
       console.error("Error updating status:", error);
       alert("Network Error. Try again.");
     }
   };
 
-  // Generic Web Audio Beep Generator
   const playSuccessBeep = () => {
     try {
       const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -87,11 +80,10 @@ export default function Tracker() {
   const enteredCount = guests.filter((g) => g.entered).length;
 
   const filteredGuests = guests.filter((guest) => {
-    if (guest.usn === "4JN24AI100" || guest.name === "ADMIN BOSS" || guest.name === "CAMERA") return false;
+    if (guest.usn === "ADMIN_BOSS_USN" || guest.name === "ADMIN BOSS" || guest.name === "CAMERA") return false;
     return guest.name.toLowerCase().includes(searchQuery.toLowerCase()) || guest.usn.toLowerCase().includes(searchQuery.toLowerCase());
   });
 
-  // Check if current user has permission to manage the desk
   const isGatekeeper = currentUser?.isAdmin || currentUser?.isScanner;
 
   return (
@@ -105,7 +97,7 @@ export default function Tracker() {
           </h1>
           <div className="flex justify-center mt-4 space-x-8 text-white">
             <div>
-              <p className="text-3xl font-black text-cyan-400">{Math.max(0, totalGuests - 1)}</p>
+              <p className="text-3xl font-black text-cyan-400">{Math.max(0, totalGuests - 2)}</p>
               <p className="mt-1 text-xs font-bold tracking-widest uppercase text-cyan-100/60">Total</p>
             </div>
             <div>
@@ -159,7 +151,7 @@ export default function Tracker() {
                     src={guest.profileImage || `https://api.dicebear.com/7.x/bottts/svg?seed=${guest.name}`}
                     alt={guest.name}
                     loading="lazy"
-                    className="object-cover mr-4 border rounded-full shadow-md w-14 h-14 border-cyan-500/30 shrink-0"
+                    className="object-cover w-14 h-14 mr-4 border rounded-full shadow-md border-cyan-500/30 shrink-0"
                   />
                   <div>
                     <p className={`font-extrabold text-base uppercase tracking-wide ${guest.entered ? "text-emerald-400" : "text-white"}`}>{guest.name}</p>
@@ -176,30 +168,31 @@ export default function Tracker() {
         </div>
       </div>
 
-      {/* 🛑 CONFIRMATION MODAL (Prevents Accidental Taps) */}
+      {/* 🛑 MOBILE OPTIMIZED CONFIRMATION MODAL */}
       {selectedGuest && (
-        <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center bg-[#020617]/90 backdrop-blur-md p-4 animate-in fade-in duration-200">
-          <div className="w-full max-w-sm bg-[#0a0f24] border border-white/10 rounded-3xl p-6 shadow-2xl flex flex-col items-center text-center animate-in slide-in-from-bottom-10 sm:slide-in-from-bottom-0 sm:zoom-in-95 duration-200">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#020617]/90 backdrop-blur-md p-4 animate-in fade-in duration-200">
+          
+          <div className="w-full max-w-sm max-h-[90vh] overflow-y-auto bg-[#0a0f24] border border-white/10 rounded-3xl p-5 shadow-2xl flex flex-col items-center text-center animate-in zoom-in-95 duration-200">
             
             <img
               src={selectedGuest.profileImage || `https://api.dicebear.com/7.x/bottts/svg?seed=${selectedGuest.name}`}
               alt={selectedGuest.name}
-              className={`w-28 h-28 rounded-full border-4 shadow-xl object-cover mb-4 ${selectedGuest.entered ? 'border-amber-500/50' : 'border-emerald-500/50'}`}
+              className={`w-24 h-24 rounded-full border-4 shadow-xl object-cover mb-4 ${selectedGuest.entered ? 'border-amber-500/50' : 'border-emerald-500/50'}`}
             />
             
-            <h2 className="text-2xl font-black tracking-wider text-white uppercase">{selectedGuest.name}</h2>
-            <p className="mb-6 text-sm font-bold tracking-widest text-cyan-400">{selectedGuest.usn}</p>
+            <h2 className="text-xl font-black tracking-wider text-white uppercase">{selectedGuest.name}</h2>
+            <p className="mb-5 text-xs font-bold tracking-widest text-cyan-400">{selectedGuest.usn}</p>
 
             {selectedGuest.entered ? (
               // UNDO CHECK-IN UI
               <div className="w-full space-y-3">
                 <div className="flex items-center justify-center mb-2 space-x-2 text-amber-400">
-                  <AlertTriangle size={18} />
-                  <span className="text-xs font-bold tracking-widest uppercase">Guest is already inside</span>
+                  <AlertTriangle size={16} />
+                  <span className="text-[10px] font-bold tracking-widest uppercase">Guest is already inside</span>
                 </div>
                 <button
                   onClick={() => confirmToggleStatus(selectedGuest.id, false)}
-                  className="w-full py-4 font-black tracking-widest uppercase transition border bg-amber-500/20 hover:bg-amber-500/30 border-amber-500/50 text-amber-400 rounded-xl"
+                  className="w-full py-3.5 font-black tracking-widest uppercase transition border bg-amber-500/20 hover:bg-amber-500/30 border-amber-500/50 text-amber-400 rounded-xl text-sm"
                 >
                   Undo & Remove Entry
                 </button>
@@ -209,16 +202,16 @@ export default function Tracker() {
               <div className="w-full space-y-3">
                 <button
                   onClick={() => confirmToggleStatus(selectedGuest.id, true)}
-                  className="w-full py-4 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black rounded-xl flex items-center justify-center space-x-2 uppercase tracking-widest shadow-[0_0_20px_rgba(16,185,129,0.3)] transition active:scale-[0.98]"
+                  className="w-full py-3.5 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-black rounded-xl flex items-center justify-center space-x-2 uppercase tracking-widest shadow-[0_0_20px_rgba(16,185,129,0.3)] transition active:scale-[0.98] text-sm"
                 >
-                  <UserCheck size={20} /> <span>Confirm Entry</span>
+                  <UserCheck size={18} /> <span>Confirm Entry</span>
                 </button>
               </div>
             )}
 
             <button
               onClick={() => setSelectedGuest(null)}
-              className="flex items-center justify-center w-full py-3 mt-4 space-x-2 text-xs font-bold tracking-widest text-white uppercase transition border bg-white/5 hover:bg-white/10 border-white/10 rounded-xl"
+              className="flex items-center justify-center w-full py-3 mt-3 space-x-2 text-xs font-bold tracking-widest text-white uppercase transition border bg-white/5 hover:bg-white/10 border-white/10 rounded-xl"
             >
               <XCircle size={16} /> <span>Cancel</span>
             </button>
@@ -228,4 +221,5 @@ export default function Tracker() {
 
     </div>
   );
-}
+    }
+                                                                                  

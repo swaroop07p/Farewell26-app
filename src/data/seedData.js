@@ -284,7 +284,7 @@ export const guestsData = [
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779641866/IMG_7774_-_Kruthi_B_R_akliq3.jpg",
     invitationImage:
-      "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779771845/WhatsApp_Image_2026-05-26_at_10.32.53_AM_axsqxl.jpg",
+      "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779781212/WhatsApp_Image_2026-05-26_at_1.05.19_PM_1_kakr2u.jpg",
     QRImg:
       "https://res.cloudinary.com/dkiddriws/image/upload/v1779729620/KRUTHI_pofrkw.jpg",
     funnyLine:

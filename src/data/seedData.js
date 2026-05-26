@@ -61,7 +61,7 @@ export const guestsData = [
     name: "RAMYASHREE S",
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779696941/Ramyashree_S_-_Ramyashree_S_topfd7.jpg",
-    invitationImage: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729648/RAMYASHREE_S-_4JN22AI043_page-0001_p26hgb.jpg",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779771845/WhatsApp_Image_2026-05-26_at_10.32.51_AM_esvawp.jpg",
     QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729619/RAMYASHREE_lqiqjp.jpg",
     funnyLine:
       "Ramyashree S says ‘I’ll be ready in 5 minutes’… legendary last words.",
@@ -105,7 +105,7 @@ export const guestsData = [
     name: "IRFAN NABILAL RON",
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779645629/copy_of_img_8304_-_irfan_ron_hnx5lq.jpg",
-    invitationImage: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729653/IRFAN_NABILAL_RON_-_4JN23AI400_page-0001_ov7jlw.jpg",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779771845/WhatsApp_Image_2026-05-26_at_10.32.52_AM_1_kztbjh.jpg",
     QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729621/IRFAN_iobbwe.jpg",
     funnyLine:
       "IRFAN NABILAL RON sounds like a hero name, but still forgets where the phone is while holding it.",
@@ -247,7 +247,7 @@ export const guestsData = [
     name: "KRUTHI BR",
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779641866/IMG_7774_-_Kruthi_B_R_akliq3.jpg",
-    invitationImage: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729654/KRUTHI_BR_-_4JN22AI025_page-0001_iidjsi.jpg",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779771845/WhatsApp_Image_2026-05-26_at_10.32.53_AM_axsqxl.jpg",
     QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729620/KRUTHI_pofrkw.jpg",
     funnyLine:
       "Kruthi B R checks the phone every 2 minutes like some celebrity is about to text personally!",
@@ -269,7 +269,7 @@ export const guestsData = [
     name: "SUSHMA S KANABUR",
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779645540/copy_of_sushma_-_sushma_k_wizior.jpg",
-    invitationImage: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729649/SUSHMA_S_KANABUR_-_4JN22AI055_page-0001_w9baqg.jpg",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779771845/WhatsApp_Image_2026-05-26_at_10.32.52_AM_2_eck818.jpg",
     QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729629/SUSHMA_mjvws1.jpg",
     funnyLine:
       "Sushma talks so fast that even Google Translate asks her to slow down!",
@@ -405,7 +405,7 @@ export const guestsData = [
     usn: "4JN22AI046",
     name: "SAHANA DEVADIGA",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779643552/Screenshot_20260524_200128_com_hihonor_photos_ListAlbumPickerActivity_-_Sahana_Devadiga_tmfrjr.jpg",
-    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779771846/WhatsApp_Image_2026-05-26_at_10.32.52_AM_l9znhp.jpg",
     QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729631/SAHANA_f2if22.jpg",
     funnyLine:
       "Sahana’s expressions during lectures deserve their own reaction sticker pack!",
@@ -426,7 +426,7 @@ export const guestsData = [
     name: "AKASH NV",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728440/IMG-20250326-WA0017_-_Akash_Nv_ljge1u.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779771304/AKASH_vifsdz.jpg",
     funnyLine:
       "Akash’s confidence is so powerful that even Wi-Fi signals get stronger near him!",
     entered: false,
@@ -587,7 +587,7 @@ export const guestsData = [
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
-      "",
+      "Manjappa may start giving lift advice unexpectidely!",
     entered: false,
   },
 ];

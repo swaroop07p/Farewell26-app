@@ -292,7 +292,7 @@ export const guestsData = [
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779643227/Kishan_-_Kishan_B_je3fdm.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772492/Kishan_yeie8a.jpg",
     funnyLine:
       "Kishan studies so seriously before exams… for exactly 10 minutes!",
     entered: false,
@@ -416,7 +416,7 @@ export const guestsData = [
     name: "NAGASHREE SP",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697593/Nagashree_-_Nagashree_S_P_khfr9z.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772492/Nagashree_nhlaj3.jpg",
     funnyLine:
       "Nagashree acts calm outside, but inside it’s just 47 browser tabs open!",
     entered: false,
@@ -446,7 +446,7 @@ export const guestsData = [
     name: "DARSHAN RL",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728401/IMG-20260309-WA0045_-_Darshan_R_L_dygwpd.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772494/Darshan_tbib2m.jpg",
     funnyLine:
       "Darshan’s biggest skill is appearing busy without actually doing anything!",
     entered: false,
@@ -456,7 +456,7 @@ export const guestsData = [
     name: "JYESHTA M GORKOD",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727815/jyeshta_-_Jyeshta_m_Gorkod_nknwvz.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772492/Jyeshta_eooluh.jpg",
     funnyLine:
       "Jyeshta’s phone battery lasts longer than her interest in boring conversations!",
     entered: false,
@@ -466,7 +466,7 @@ export const guestsData = [
     name: "PRITANYA MM",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728307/IMG-20260423-WA0043_-_Pritanya_MM_qda29g.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772493/Pritanya_syh1ze.jpg",
     funnyLine:
       "Pritanya can spot snacks from a kilometer away like a food detective!",
     entered: false,
@@ -476,7 +476,7 @@ export const guestsData = [
     name: "RAHUL BIDARE E",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728350/IMG-20260519-WA0000_-_Rahul_Bidare_E_h0hyth.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772492/Rahul_r2dxbf.jpg",
     funnyLine: "Rahul says ‘I’m on the way’ while still deciding what to wear!",
     entered: false,
   },
@@ -485,7 +485,7 @@ export const guestsData = [
     name: "JYOTHI MATAD S",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727557/IMG20241120185311_-_Jyothi_Matad_jltoki.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772492/Joythi_hntxmj.jpg",
     funnyLine:
       "Jyothi laughs so hard at memes that even the neighbors get curious!",
     entered: false,
@@ -495,7 +495,7 @@ export const guestsData = [
     name: "PRAJWAL R KOLEKAR",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727893/396094a5-5b91-4843-b611-c50e78b7a21d_-_Prajwal_R_Kolekar_o1vsnm.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772492/Parwal_utilbn.jpg",
     funnyLine:
       "Prajwal’s secret talent is making simple stories sound like action movies!",
     entered: false,
@@ -505,7 +505,7 @@ export const guestsData = [
     name: "VAISHNAVI M VAIDYA",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727588/20260514_122755_-_Vaishnavi_M_Vaidya_upetiw.jpg",
     invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
-    QRImg: "",
+    QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779772491/Vaishnavi_ercnur.jpg",
     funnyLine:
       "Vaishnavi remembers every tiny detail… except where she kept her own things!",
     entered: false,

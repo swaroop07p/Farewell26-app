@@ -291,7 +291,7 @@ export const guestsData = [
     name: "KISHAN B",
     profileImage:
       "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779643227/Kishan_-_Kishan_B_je3fdm.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Kishan studies so seriously before exams… for exactly 10 minutes!",
@@ -365,7 +365,7 @@ export const guestsData = [
     usn: "4JN22AI063",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697261/IMG_9320_-_Yashwanth_rs5dci.jpg",
     name: "YASHWANTH PATEL",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Yashwanth walks like he owns the place… until attendance gets announced!",
@@ -375,7 +375,7 @@ export const guestsData = [
     usn: "4JN22AI011",
     name: "DEEKSHITH HV",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779645454/IMG_20260516_114922_-_Deekshith_H_V_io9c75.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Deekshith’s plans are always 100% confirmed… until the last minute!",
@@ -405,7 +405,7 @@ export const guestsData = [
     usn: "4JN22AI046",
     name: "SAHANA DEVADIGA",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779643552/Screenshot_20260524_200128_com_hihonor_photos_ListAlbumPickerActivity_-_Sahana_Devadiga_tmfrjr.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "https://res.cloudinary.com/dkiddriws/image/upload/v1779729631/SAHANA_f2if22.jpg",
     funnyLine:
       "Sahana’s expressions during lectures deserve their own reaction sticker pack!",
@@ -415,7 +415,7 @@ export const guestsData = [
     usn: "4JN22AI031",
     name: "NAGASHREE SP",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779697593/Nagashree_-_Nagashree_S_P_khfr9z.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Nagashree acts calm outside, but inside it’s just 47 browser tabs open!",
@@ -425,7 +425,7 @@ export const guestsData = [
     usn: "4JN22AI004",
     name: "AKASH NV",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728440/IMG-20250326-WA0017_-_Akash_Nv_ljge1u.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Akash’s confidence is so powerful that even Wi-Fi signals get stronger near him!",
@@ -435,7 +435,7 @@ export const guestsData = [
     usn: "4JN22AI029",
     name: "MOHAMMED AMAN",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727970/Mohammed_Aman_-_Mohammed_Aman_u0lxhp.heic",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Aman’s confidence level is so high, even wrong answers sound correct!",
@@ -445,7 +445,7 @@ export const guestsData = [
     usn: "4JN22AI010",
     name: "DARSHAN RL",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728401/IMG-20260309-WA0045_-_Darshan_R_L_dygwpd.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Darshan’s biggest skill is appearing busy without actually doing anything!",
@@ -455,7 +455,7 @@ export const guestsData = [
     usn: "4JN22AI020",
     name: "JYESHTA M GORKOD",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727815/jyeshta_-_Jyeshta_m_Gorkod_nknwvz.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Jyeshta’s phone battery lasts longer than her interest in boring conversations!",
@@ -465,7 +465,7 @@ export const guestsData = [
     usn: "4JN22AI064",
     name: "PRITANYA MM",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728307/IMG-20260423-WA0043_-_Pritanya_MM_qda29g.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Pritanya can spot snacks from a kilometer away like a food detective!",
@@ -475,7 +475,7 @@ export const guestsData = [
     usn: "4JN22AI039",
     name: "RAHUL BIDARE E",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728350/IMG-20260519-WA0000_-_Rahul_Bidare_E_h0hyth.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine: "Rahul says ‘I’m on the way’ while still deciding what to wear!",
     entered: false,
@@ -484,7 +484,7 @@ export const guestsData = [
     usn: "4JN22AI021",
     name: "JYOTHI MATAD S",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727557/IMG20241120185311_-_Jyothi_Matad_jltoki.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Jyothi laughs so hard at memes that even the neighbors get curious!",
@@ -494,7 +494,7 @@ export const guestsData = [
     usn: "4JN22AI036",
     name: "PRAJWAL R KOLEKAR",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727893/396094a5-5b91-4843-b611-c50e78b7a21d_-_Prajwal_R_Kolekar_o1vsnm.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Prajwal’s secret talent is making simple stories sound like action movies!",
@@ -504,7 +504,7 @@ export const guestsData = [
     usn: "4JN22AI059",
     name: "VAISHNAVI M VAIDYA",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727588/20260514_122755_-_Vaishnavi_M_Vaidya_upetiw.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Vaishnavi remembers every tiny detail… except where she kept her own things!",
@@ -514,7 +514,7 @@ export const guestsData = [
     usn: "4JN22AI045",
     name: "SAHANA N",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728235/InShot_20260506_123210540_-_Sahana.N_Sahana.N_bvf46l.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Sahana says ‘I’ll just watch one reel’… and suddenly the sun comes up!",
@@ -524,7 +524,7 @@ export const guestsData = [
     usn: "4JN23AI403",
     name: "SOMANNA S",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727660/20250611_200022_-_Somu_S_vyphpa.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Somanna’s greatest skill is looking busy while doing absolutely nothing!",
@@ -534,7 +534,7 @@ export const guestsData = [
     usn: "4JN23AI404",
     name: "VINUTH AD",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728270/DSC_0259-1_2_1_-_Vinuth_A_D_cvdc8n.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Vinuth gives such dramatic reactions that even serial actors feel threatened!",
@@ -544,7 +544,7 @@ export const guestsData = [
     usn: "4JN22AI027",
     name: "MANOJ PATIL",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728107/Manoj_Patil_-_Manoj_Patil_s83tm6.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Manoj starts explaining a small story like he’s directing a blockbuster movie!",
@@ -554,7 +554,7 @@ export const guestsData = [
     usn: "4JN22AI012",
     name: "DEEPIKA TM",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779727728/IMG20250519164657_-_Deepika_Nandi_azmb2o.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Deepika says ‘I’m almost ready’ so confidently that even the clock gets confused!",
@@ -564,7 +564,7 @@ export const guestsData = [
     usn: "4JN22AI060",
     name: "VARSHINI SB",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779728667/IMG_2699_-_Varshini_S_B_mjtfeb.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Varshini can laugh at her own jokes for so long that others start laughing too!",
@@ -574,7 +574,7 @@ export const guestsData = [
     usn: "4JN22AI047",
     name: "SAHANA SK",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779730929/Sahana_S_K_-_Sahana_S_K_ihmhc3.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "Sahana enters quietly, but her laughter announces her presence to the whole room!",
@@ -584,7 +584,7 @@ export const guestsData = [
     usn: "4JN22AI026",
     name: "Manjappa Gowda G R",
     profileImage: "https://res.cloudinary.com/dkiddriws/image/upload/q_auto/f_auto/v1779736737/Manjappa_Gowda_-_Manjappa_Gowda_kvuttt.jpg",
-    invitationImage: "",
+    invitationImage: "https://res.cloudinary.com/dsojrrb9j/image/upload/v1779724509/WhatsApp_Image_2026-05-25_at_9.24.37_PM_ymle31.jpg",
     QRImg: "",
     funnyLine:
       "",

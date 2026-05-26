@@ -308,6 +308,7 @@ export const guestsData = [
       "Vamshi enters the room like a hero, but forgets why he came there!",
     entered: false,
   },
+
   {
     usn: "4JN22AI044",
     name: "ROHAN S GOWDRU",
@@ -319,6 +320,8 @@ export const guestsData = [
       "Rohan’s biggest workout is searching for the TV remote after sitting down!",
     entered: false,
   },
+    //verified till her 
+
   {
     usn: "4JN22AI001",
     name: "ADITHI HS",
